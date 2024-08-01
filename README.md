@@ -13,10 +13,13 @@ python3.10 -m venv env
 ...
 
 # Install requirements
-(env) pip install -r requirement.txt
+(env) pip install -r requirements.txt
+
+# Run fastapi (auto reload)
+fastapi dev
 
 # Run fastapi
-fastapi dev main.py
+fastapi run
 ```
 
 ## Project Diagrams
