@@ -1,0 +1,10 @@
+[
+    {
+        "component": "Title",
+        "value": "DocumentViewer Nesnesine Dinamik Yöntemle Dosya Set Etme"
+    },
+    {
+        "component": "Code",
+        "value": "void Button12_OnClick(object sender, MouseEventArgs e)\n{\n    string targetPath = \"OBashir/pdf_test/7044.pdf\";\n    string targetId = \"183334\";\n\n    DocumentViewer1.SetTarget(targetPath, targetId);\n}"
+    }
+]

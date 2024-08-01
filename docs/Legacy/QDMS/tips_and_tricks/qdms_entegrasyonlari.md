@@ -1,0 +1,4 @@
+# QDMS Entegrasyonları
+
+Entegrasyonu için öncelikle size iletilen excel şablonuna uygun olacak şekilde bir veri yapısı hazırlanarak bize bilgilerin iletilmesi gerekecektir. Veri yapısı olarak SAP RFC , Web Servis , SQL veya Oracle view & tablo gibi veri kaynaklarını kullanarak bilgi işlem ekibiniz veri yapısını hazırlayabilir. Veri yapısı hazırlanırken önemli olan noktalar  ,Personel entegrasyonu için mevcut QDMS sistemindeki kullanıcılar için SicilNumaraları , Departman & Unvan kodları değişmemelidir. Ürün , Müşteri &Tedarikçi entegrasyonları için ise Kod yapıları değişmemelidir. Değişmesi durumunda eski kayıtlar pasife alınarak yeni kayıtlar sisteme aktarılır. Bu noktalara dikkat ederek veri hazırlanarak bilgileri yeni bir bildirimle bize iletilebilirse entegrasyon çalışmasını yapanbiliriz. 
+

@@ -1,0 +1,43 @@
+---
+description: Organizasyon Bakımı
+keywords:
+  - CSP
+  - docs
+  - hr
+slug: index
+---
+
+# Organizasyon Bakımı
+
+Kullanıcı, pozisyon, departman ve ünvan tanımlarının her birinin aktiflik durumu mevcuttur. Kullanıcıların bu tanımları aktifken, sistem içerisinde tanımlanabilir, kullanılabilir ve canlı veriler olarak sistemin birçok yerinde rol alabilirler.
+
+Ancak bu tanımlardan herhangi biri pasife düştüğünde, artık aktif olarak sistemde bu kayıt etkin olmayacak demektir. Bu durumda, daha önceden aktif olan ve sistemin birçok yerinde kullanılmış, hali hazırda hala kullanılmakta olan bir kaydın pasife düşmesi, sistemde kaydın artık kullanılamayacağına ait uyarılar alınmasına sebep olacaktır.
+
+Böyle bir durumda, “kayıt pasif” uyarılarının alınmaması için, sistemdeki tüm süreçler kontrol edilip, eskiden aktif olan ancak şuan pasife düşen kayıt aranarak tek tek düzenleme yapılması gerekecektir. Tabi bu uzun süren ve yürütülebilir olmaktan uzak bir işlem olacaktır.
+
+İşte böyle bir senaryoda, tek bir yerden tanımlama yapılarak hataların önüne geçilmesini sağlamak için Organizasyon Bakımı alanı kullanılır.
+
+Organizasyon bakımı alanının çalışma şekli genel olarak, pasife düşen bilginin id si yerine, yeni gelen aktif kaydın id sinin tanımlanması şeklindedir. Böylece sistem, işleyişi sırasında pasif bir kayda rastlarsa, “kayıt pasif” uyarısını vermeden önce bu alanı kontrol eder ve pasif kayda tanımlanmış yeni aktif bir kayıt varsa onun üzerinden işlemlerine devam eder. Tek bir yerden tanımlama yapılarak işleyişin hataya düşmeden devam etmesi sağlanmış olur.
+
+Bu alana, arayüzde, “İnsan Kaynakları” bölümü altındaki “Organizasyon Bakımı” alanından erişilir. Organizasyon bakımı, alt başlıklar olarak;
+
+- [Kullanıcı Bakımı](./users-maintenance.md)
+- [Pozisyon Bakımı](./positions-maintenance.md)
+- [Departman Bakımı](./department-maintenance.md)
+- [Unvan Bakımı](./professions-maintenance.md)
+
+alanlarını içermektedir.
+
+<div style={{textAlign: 'center'}}>
+
+![Organizasyon Bakımı](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload599b5878-0b74-4f83-a02d-ed6c017571d4)
+
+</div>
+
+## En İyi Uygulama
+
+:::tip DOĞRU KULLANIM
+
+- Süreçlerde hata alınmaması için, sistem yöneticisi tarafından, pasife düşen kaydın bakım işlemi yapılmalıdır
+
+::: 

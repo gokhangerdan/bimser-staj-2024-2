@@ -1,0 +1,132 @@
+---
+title: Akış
+description: Akış
+keywords:
+  - CSP
+  - docs
+  - ide
+slug: index
+---
+
+Akış, projenin işlem adımlarının tasarlandığı bileşendir. Bir sürecin, kimlere gönderileceği, gönderilen adımlarda hangi aksiyonların alınacağı, alınan aksiyonlar sonucu akışın nereye yönleneceği ve bu sırada gerçekleştirilecek kontroller ve işlemler akış tarafında tasarlanır. Akış, geliştirme arayüzünde bulunan Akış Tasarım Nesneleri kullanılarak dizayn edilir.
+
+Arayüz ekranındaki Çözüm Gezgini panelinde bulunan bir projenin akışı, aktif ekran olarak açıldığında ve akış üzerine tıklandığında, Özellik Görüntüleyici  panelinde akışın sahip olduğu özellikler listelenecektir.
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload0c3f5a97-63ff-4af4-8dcd-47826f461c76)
+
+Özellik Görüntüleyici panelinde Akış için "Flow Properties" ve "Events" sekmeleri bulunmaktadır.
+
+## Flow Properties
+
+Akışın sahip olduğu özelliklerin görüntülendiği ve bu özelliklerin düzenlenebildiği alanlar içerir. Akış özellikleri, özellik türüne göre alt başlıklar altında gruplanmıştır.
+
+### General
+
+`Flow Name` - Akışın uygulama içerisinde kullanılacak adıdır. Akışa kod tarafında erişim sağlanırken ve başka nesnelerin içinde akış seçimi yapılırken, bu alanda yazılan akış adı bilgisi kullanılır.
+
+`Flow Caption` - Akışın başlık bilgisi bu alana yazılır. Uç kullanıcılar tarafından görünmesi istenen akış başlık metnidir.
+
+`Disable Email Sending` - Akış genelindeki nesnelerde elektronik posta gönderimi kapatılması nesnelere tek tek tıklamak yerine bu özellik aktif edilerek yapılabilmektedir.
+
+### Mail Message Template
+
+`Custom Template` - Akış tarafında gönderilecek onay ve bilgi e-postalarının, sistem tarafından belirlenmiş varsayılan bir şablonu mevcuttur. E-posta şablonu özelleştirilmek istenirse bu özellik aktif edilir. Özellik aktif edildiğinde *"Mail Template"* isimli bir alan görünür olacaktır.
+
+`Mail Template` - Varsayılan e-posta şablonunun html formatta görüntülenerek, üzerinde değişiklik yapılmasına izin veren ekran, bu alandan açılır. Pencere içinde e-postaların Türkçe ve İngilizce gibi çoklu dil karşılıkları hazırlanarak, kullanıcılara sistemi kullandıkları dile göre e-posta gönderilmesi yapılabilmektedir. Tasarlanan e-posta şablonu, önizleme penceresinde anlık olarak görüntülenebilir.
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload9b987404-5c99-4020-82da-cecfa891325c)
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload4c06548c-d2fc-4f6a-9b57-325f46e543b5)
+
+Elektronik postada belli bir dil düzenlenmek istenirse panel içindeki dil seçeneği değiştirilerek, seçilen dile ait e-posta kodları ve önizlemesi yapılabilir.
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload7457f411-9e2a-4763-bf69-0c1192f421b1)
+
+:::info BİLGİ
+
+Kullanıcıların sistemde hangi dilde e-posta alacakları, İnsan Kaynakları bölümünde her kullanıcıdaki **Varsayılan Dil** alanında yapılan seçime göre belirlenmektedir.
+
+<div style={{textAlign: 'center'}}>
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload67800c02-1546-4c7f-99cf-1078c4a991b5)
+
+</div>
+
+:::
+
+### Organization
+
+`Default Manager Profile` - Bu alanda, web arayüzünde [Yönetici Anahtarları](web/human-resources/manager-keys.md) kısmında tanımlanan tüm yönetici profilleri listelenir. Yönetici atama işlemi sırasında bir yönetici profili seçilmemişse, bu alandan seçilen yönetici profilindeki yöneticiye atama yapılabilmesi için kullanılır.
+
+`Use No Manager If User's Manager Does Not Exist` - Yönetici atama işleminde, yönetici yoksa akışın hata vermeden, atama nesnesinden çıkan "Üstü Yok" kolondan ilerlemesi için bu özellik aktif edilir. Özellik pasifken, yönetici bulunamazsa sistem uyarı verecektir.
+
+### Statuses
+
+`Statuses` - Akış durumlarının listelendiği alandır. Akışın, anlık hangi durumda olduğu bilgisi, bu durum tanımları kullanılarak belirtilir. Akışın belirli aşamalarında akış durumunu değiştirmek için bu değerler kullanılır. Akış tasarım nesnelerinden biri olan **["Akış Durumu"](./standart-flow-controls/FlowState.md)** nesnesi, akış adımlarına konumlandırılarak içeriğinden, bu alanda tanımlanmış durumlardan biri seçildiğinde, akışın durumu, set edilen durum bilgisi olarak güncellenmiş olur.
+
+Akışta varsayılan olarak tanımlanmış; **Başlatılmadı**, **Başladı**, **Bitti**, **Onaylandı**, ve **Reddedildi** şeklinde 5 adet durum bilgisi mevcuttur. Durum alanına tıklanarak mevcut bir durum düzenlenebilir veya yeni bir durum bilgisi eklenebilir.
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-uploadda8bbaed-008e-4891-a55c-8e400759381b)
+
+### History
+
+`Keep Cancelled` - Akış içinde Pozisyon Grubu nesnesi kullanıldığında, nesne içindeki isteklerde onayı gerekmediği için iptal edilen isteklerin (örneğin grupta 5 kişi varken Analize Gönder gibi bir olayı devam ettirmek için 1 kişinin onayı yeterli olduğunda diğer 4 kişinin isteğine gerek duyulmamaktadır) sürecin akış tarihçesinde gözükmesi istenirse özellik aktif edilir.
+
+### Coding
+
+`Execution limit` - Akış bazında bir adımın kaç defa çalışabileceğini sınırlamak için kullanılır. Tanımlanan değer 10 ise akış adım üzerinden 10 defa geçebilir. 
+
+`Execution limit for duration` - StepExecutionLimitDuration özelliği belirtilen süre içinde adımın çalışma limitinin en fazla ne kadar olabileceğini tanımlanmaktadır. Örneğin bir dakika içinde adım en fazla 10 kere çalışabilir tanımı yapılmasında kullanılmaktadır.
+
+`Execution limit duration` - Süreye bağlı döngüyü durdurmak için sürenin tanımlanmasında kullanılmaktadır.Geliştirici ara yüzünde alanda çalışma süresi seçilmelidir. Seçilen değer saat:dakika:saniye türündedir.
+
+### Events
+
+`Events` - Akış tarafında kullanılan nesnelerin hangi aksiyonu alacağı, nesneye eklenen olaylarla belirlenir. Olaylar kısmında varsayılan olarak gelen; Gönder, Onayla, Reddeti İptal et, Devam Ettir olayları mevcuttur. Akış tarafında kullanılan nesnelere, alması istenen aksiyon doğrultusunda olaylar listesinden olay eklenir ve ilgili olay gerçekleştiğinde akışın hangi yöne gideceği, nesneden çıkarılan, o olaya ait bağlantı koluyla sonraki adıma bağlanır. Nesneye kaç tane olay eklendiyse, dizayn anında tüm olayları ifade edecek bağlantı kolları gerekli akış adımlarına bağlanmak zorundadır.
+
+Dizayn anında kullanılan nesneye hangi olaylar eklenmişse, web arayüzünde o nesnede tanımlı kullanıcı form üzerinde bu olay butonlarını görür ve onlar üzerinden aksiyon alabilir.
+
+Olaylar alanından geliştiricinin kendi belirlediği yeni olay tanımları eklenebilir. Mevcut tanımların özellikleri değiştirilebilir veya var olan bir olay silinebilir.
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload54e555e5-5760-4d43-bd33-af1496d03e32)
+
+Olaylar alanında listelenen olay tanımlarının düzenlenebilen özellikleri mevcuttur.
+
+| **Özellik** 	| **Açıklama** 	|
+|---	|---	|
+| Identity 	| Olayı ifade eden id değeri bu kısımda görünür. Bu alan salt okunur moddadır ve değiştirilemez. 	|
+| Description 	| Olayın metin kısmının göründüğü alandır. 	|
+| Visible 	| Web arayüzünde ilgili olay butonunun görünmesi için bu özellik aktif edilmelidir. 	|
+| Validate 	| Form dizayn anında nesne özelliklerinde verilen zorunluluk şartlarının ve formun validasyon Kural Yöneticisi kısmında yazılan kontrollerin çalışarak, istenen durumun sağlanmadığı veya zorunlu nesnelerin boş bırakıldığı durumlarda kullanıcıya uyarı mesajı verilmesi için, kullanıcının tıkladığı olay butonunda “Validate” alanının işaretli olması gerekir. 	|
+| Reason 	| Sebep alanı işaretlenmiş bir olaya web arayüzünde tıklandığında, kullanıcının karşısına sebep açıklamasını girmesi için bir alan çıkarılır. Genelde Reddet olayı için kullanılır ve kişi Reddet butonuna basarak formu reddetmek istediğinde, red nedenini sebep alanına girmesi istenir. 	|
+| Reason Title 	| Web ara yüzünde sebep açıklamasının gösterildiği alan başlığındaki ifadenin özelleştirilmesinin yapıldığı alandır. 	|
+| Digital Signature Required 	| Dijital imza gerekli alanı işaretlenmiş bir olaya web arayüzünde tıklandığında kullanıcının E-imza işlemi gerçekleştirmesi için gerekli ekran açılacaktır. 	|
+| Default 	| Varsayılan alanı işaretli olay ya da olaylar, akış ekranına eklenen onay kontrolleri nesnelerinin (Pozisyon, Pozisyon Grubu vs.) onaylar listesine otomatik eklenir. 	|
+| Confirmation 	| Confirmation alanı işaretli olan bir olaya web arayüzünde tıklandığında, kullanıcının karşısına “İşlemi gerçekleştirmek istediğinizden emin misiniz?” şeklinde bir onaylama ekranı açılır. Kullanıcı bu ekranda “Evet” butonuna tıklandığında akış bir sonraki adıma geçer. “Hayır” butonuna tıklandığında ise form ekranına geri dönülür ve akış ilerlemez. Bu özellik genelde İptal olayı için kullanılır ve kullanıcıdan süreci iptal etmek için ekstra teyit beklenir. 	|
+| Enabled 	| Olay tanımının kullanılıp kullanılamayacağı bu alanda belirlenir. 	|
+| Form 	| Form alanından, akışta bulunan bütün Doküman nesneleri listelenir. Herhangi bir event için bu alandan bir Doküman nesnesi seçildiğinde, web arayüzünde bu olaya tıklandığında kullanıcının karşısına Form alanından seçilen Doküman nesnesi içindeki tanımlanmış formun ekranı açılır ve kullanıcının formdaki alanları doldurması beklenir. Kullanıcı açılan formu doldurup tamam dediğinde akış bir sonraki adıma ilerler. Doldurulan bu form, ilgili akış nesnesinin “Event Formu” olmuş olur. 	|
+| Icon 	| Web arayüzünde formun üzerinde belirecek olan olay butonlarının ikonları bu alandan seçilir. Varsayılan olarak gelen olayların sistemde bulunan ikonları otomatik olarak ikon kolonunda belirtilmiş olur. 	|
+
+### Variables
+
+`Variables` - Bazı akış bilgilerinin tutulduğu değişken değerleri bu alanda yer alır. Varsayılan olarak değişkenler alanında; Süreç No (processId), İstek No (requestID), Oluşturan (processCreator), Başlangıç Tarihi (processStartDate), Durum numarası (processStatusNo), Durum (processStatus) ve İstek Tarihi (requestDatr) bilgileri listelenmektedir.
+
+Variables alanında bulunan akış verileri sürecin, Akış Bilgileri alanında, kullanıcıların web arayüzündeki Onaylar, Taslaklar ve Geçmiş sayfalarında listelenir ve ilgili sürece ait temel bilgileri yansıtır. Bu bilgilerden görünmesi istenmeyen bir değişken varsa "Visible" kolonundaki işareti kaldırılabilir veya değişkenlerin bulunduğu sıralama sürükle bırak yöntemi ile değiştirilerek İş Akış Yönetimi içindeki sayfalarda kolonların sıralaması değiştirilebilmektedir.
+
+Form üzerindeki nesnelerin içerdiği bilgiler de Akış Bilgileri veya İş Akış Yönetimi bölümü içindeki sayfalarda gösterilmesi istendiğinde, paneldeki Ekle butonu altında açılan Kontroller seçeneğine tıklanarak nesne tanımı paneli açılır.
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload00b6cf63-4695-452a-9aa1-ed4cfd10ecda)
+
+Panel içerisinde **Form** ve **Fields** alanları gösterilmektedir. Form alanında gösterilmesi istenen nesnenin bulunduğu form veya formların seçimi yapılır. Formun seçilmesi sonrasında, Fields alanında seçilen form/formların içerdiği nesneler listelenerek gösterilmek istenen ögeler seçilerek Tamam butonu ile tanım işlemi yapılır ve Variables paneline geri dönülerek ögeler ekli halde gösterilir.
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload3e195f3f-1a16-40c3-bc9e-6e123a280eff)
+
+![Akış](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload940fc4e6-8497-484b-85eb-061adba9b501)
+
+Eklenen kontrollerin Caption bilgisi güncellenerek web ara yüzünde gösterilecek ifade değiştirilebilmektedir.
+
+## Events
+
+Akışın sahip olduğu olaylar, Özellik Görüntüleyici panelindeki "Events" sekmesinde yer almaktadır. Her bir olay, farklı çalışma anlarında tetiklenerek kendilerine özgü işlemleri gerçekleştirir. Bu olaylara geliştirici tarafından yazılan kodlar da ilgili olayın tetiklendiği anda çalıştırılır.
+
+Olaylar alanında bulunan olaylara çift tıklandığında ekran, C# kodlamanın yapılabileceği “Akışadı.cs” isimli akış kod editörü kısmına yönlendirilir ve tıklanan olaya ait method bloğu otomatik olarak oluşturulur. Geliştirici bu methodlar içerisinde istediği kod bloğunu kurgulayabilir. Events sekmesinden tıklanarak kod tarafında methodu oluşturulmuş olayın yanında, method adı bilgisi otomatik oluşturularak, olayla method arasındaki ilişki belirtilmiş olur.

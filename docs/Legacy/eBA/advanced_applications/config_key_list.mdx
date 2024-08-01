@@ -1,0 +1,442 @@
+# Config Key List
+
+| PARAMETRE | AÇIKLAMASI | MİNİMUM DEĞERİ | MAXİMUM DEĞERİ | VARSAYILAN DEĞERİ | SETUP İLE GELİYOR MU ? |
+| --- | --- | --- | --- | --- | --- |
+| BrowserPlugins.eBAScanner.FilePartSize | eBAScanner plugininin dosya parçalarının ne kadar büyüklükte olacağını belirten parametredir. | 1 | - | 5 | Evet |
+| BrowserPlugins.***.ModuleAssembly | *** Alana plugin adı gelmelidir. Kullanılacak olan pluginin hangi assemblyden besleneceğini belirten parametredir. | - | - | - | Hayır |
+| BrowserPlugins.***.ShowButtonName | *** Alana plugin adı gelmelidir. Özel bir doküman tarama yapısı kullanmak istediğimizde tarama butonunun üzerinde yazacak olan metni belirten parametredir. | - | - | Özel Tarama | Hayır |
+| BrowserPlugins.***.Version | *** Alana plugin adı gelmelidir. Kullanılacak olan pluginin versiyonunu belirten parametredir. | - | - | - | Hayır |
+| BrowserPlugins.eBADocumentOpener.FilePartSize | eBADocumentOpener plugininin dosya parçalarının ne kadar büyüklükte olacağını belirten parametredir. | 1 | - | 5 | Hayır |
+| BrowserPlugins.eBAScanner.Compression | Doküman yönetimine tarama yapılarak doküman yüklenmek istendiğinde dokümanlara sıkıştırma işleminin uygulanıp/uygulanmayacağını belirten parametredir. | False | True | True | Hayır |
+| BrowserPlugins.eBAScanner.MaxFileSize | GB Cinsinden verilir, doküman yönetimine taratılarak yüklenebilecek maximum dosya boyutunu belirtir. | 1 | - | 4 | Hayır |
+| BrowserPlugins.eBAScanner.MultipleSelect | Doküman yönetimine tarama yapılarak doküman yüklenmek istendiğinde çoklu doküman seçimi yapılıp/yapılamayacağını belirten parametredir. | False | True | True | Hayır |
+| BrowserPlugins.eBAScanner.ScannerCompression | eBAScanner plugininin sıkıştırma yöntemini belirten parametredir. | - | - | nan | Hayır |
+| BrowserPlugins.eBAScanner.Use32Bit | Doküman yönetimine tarama yapılarak doküman yüklenmek istendiğinde 32Bit mi yoksa 64Bit mi eBAScanner kullanılsın seçimi yapılan parametredir. | False | True | False | Hayır |
+| Delegation.Enable | Sistemde Vekalet yapısını açar/kapatır. | False | True | False | Evet |
+| Delegation.Transfer | Vekaletlerde aktarımı açar/kapatır. | False | True | False | Evet |
+| DigitalSignature.CardLibrary | Dijital imza kartında işlem yapabilmek için hangi DLL'in kullanılacağını belirten parametredir. | - | - | siecap11.dll | Evet |
+| DigitalSignature.Client.PinResetSecond | İmza pin kodunu resetleme ekranının kapanma süresini belirten parametredir. Saniye cinsinden belirtilir. | - | - | 15 | Evet |
+| DigitalSignature.Client.ScreenCloseSecond | İmza pin kodu ekranının kapanma süresini belirten parametredir. Saniye cinsinden belirtilir. | - | - | 120 | Evet |
+| DigitalSignature.Client.Version | Dijital imzanın istemci sürümünü belirten parametredir. | - | - | 122 | Evet |
+| DigitalSignature.CRLURL | Sertifika iptal listesi dosyalarını DigitalSignature\CARootCertificates konumuna indirmek için kullanılan parametredir. | - | - | http://www.turktrust.com.tr/sil/TURKTRUST_Kok_SIL_s3.crl | Evet |
+| DigitalSignature.UserCertficateIdentifierProperty | Dijital imza numarasının (TCKN) kullanıcı üzerinde hangi özellikte tutulduğunu belirten parametredir. Genelde DigitalSignatureCertificateIdentifier adında bir property üzerinde tanımlanır. | - | - | - | Evet |
+| DocumentManagement.CheckoutTimeout | Dakika cinsinden belirtilir. Checkout işleminde ki zaman aşımı süresini belirtir. | 10 | - | 30 | Evet |
+| DocumentManagement.Indexing.ExcludedExtensions | "," İle ayrılarak girilmelidir. Index işlemi sırasında index işlemi uygulanmayacak olan dosya uzantılarını belirtir.  | - | - | - | Evet |
+| DocumentManagement.Indexing.IndexStoragePath | Indexlenen dosyaların verilerinin depolandığı konumu belirten parametredir. Sunucu üzerindeki konum belirtilir. | - | - | - | Evet |
+| DocumentManagement.Indexing.OCR.LicencePageCount | Dönemlik satın alınan ocr sayfa sayısı bilgisi default olarak 10000'dir. Bu rakamdan fazla olması durumunda eBAConfigurationEditor de ilgili alana bu parametre eklenmelidir.  | 10000 | - | 10000 | Hayır |
+| DocumentManagement.ShowFilesLibrary | Doküman yönetim sisteminde "files" kütüphanesinin kullanıcılara gösterilip/gösterilmeyeceğini belirten parametredir. | False | True | False | Evet |
+| DocumentManagement.ShowSystemLibrary | Doküman yönetim sisteminde "system" kütüphanesinin kullanıcılara gösterilip/gösterilmeyeceğini belirten parametredir. | False | True | False | Evet |
+| DocumentManagement.ShowWorkflowLibrary | Doküman yönetim sisteminde "workflow" kütüphanesinin kullanıcılara gösterilip/gösterilmeyeceğini belirten parametredir. | False | True | False | Evet |
+| Delegation.CanEditOnWeb | Vekaletin düzenlenip düzenlenemeyeceğini belirten  parametredir. | False | True | True | Hayır |
+| Development.EnableSqlQueryRecompile | Sistemdeki SQL sorgularının çalıştırılması sırasında sorgu içeriğinin SQL cache'e alınmadan her çalışmada baştan derlenmesini istediğimizde bu parametreyi aktif ederiz. | False | True | False | Hayır |
+| DigitalSignature.CollectiveSignature.CollectiveSignCount | Toplu imza için en az kaç imza onayı olması gerektiğini belirten parametredir. | - | - | 4 | Hayır |
+| DigitalSignature.CollectiveSignature.ErrorCodePolicies | İçerisinde Key-Value şeklinde kuyruk imzanın hata poliçelerini tutar. | - | - | - | Hayır |
+| DigitalSignature.DelegateSignature | Vekalet verilen kişinin bizim yerimize de imza atabilmesi için kullanılan parametredir. | False | True | False | Hayır |
+| DigitalSignature.DigitalSignatureTimeOut | Saniye cinsinden belirtilir. Dijital imzanın işlem sırasında ne kadar süre sonra zaman aşımına uğrayacağını belirten parametredir. | - | - | 100000 (100 saniye) | Hayır |
+| DigitalSignature.DocuSign.Host | DocuSign için Host adresini belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.DocuSign.IntegratorKey | DocuSign için kullanılan entegrasyon anahtarını belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.DocuSign.ListenerUrl | DocuSign için kullanılan bilgilendirmelerin gönderileceği adresi belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.DSService.Address | Dijital imzanın windows servis adresini belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.DSService.BindingName | Dijital imzanın windows servis adını belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.License | Dijital İmza lisansını belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.MobileTimeOut | Saniye cinsinden belirtilir. Mobil imzanın işlem sırasında ne kadar süre sonra zaman aşımına uğrayacağını belirten parametredir. | - | - | 100000 (100 saniye) | Hayır |
+| DigitalSignature.ProxyPassword | İmza için proxy kullanılıyorsa proxy şifresini belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.ProxyServer | İmza için proxy kullanılıyorsa proxy sunucunun adresini belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.ProxyServerPassword | İmza için proxy kullanılıyorsa proxy sunucuya erişecek hesabın kullanıcı adını belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.ProxyServerUserName | İmza için proxy kullanılıyorsa proxy sunucuya erişecek hesabın şifresini belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.ProxyUserName | İmza için proxy kullanılıyorsa proxy kullanıcı adını belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.RestAddress | DSClient servisi kullanımı için adresi belirten parametredir. | - | - | http://localhost:3638 | Hayır |
+| DigitalSignature.Seal.CertificateHex | Elektronik mührün sertifika bilgisini belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.Seal.CertificateSerialNumber | Elektronik mührün sertifika numarasını belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.Seal.Library | Elektronik mührün kütüphanesini belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.Seal.Password | Elektronik mührün şifresini belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.Seal.SlotID | Elektronik mührün kart okuyucu slotunu belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.ShowOnGrid | Dijital imza kolonunun arayüzlerdeki gridler üzerinde görünüp/görünmeyeceğini belirten parametredir. | False | True | False | Hayır |
+| DigitalSignature.SignatureExtensions | "," İle ayrılarak belirtilmelidir. İmzalanabilecek belge uzantılarının belirtildiği parametredir. Sadece PDF için çalışmaktadır. | - | - | - | Hayır |
+| DigitalSignature.TimeStamp.BlackList | "," İle Ayrılarak belirtilir. Arşiv zaman damgası için geçersiz algoritmaları belirttiğimiz parametredir. Eğer damga algoritması bu listede yer alıyorsa tekrar damgalanır. | - | - | - | Hayır |
+| DigitalSignature.TimeStamp.Host | Zaman damgası için gerekli olan host adresini belirtir. | - | - | - | Hayır |
+| DigitalSignature.TimeStamp.Password | Zaman damgasının kimlik doğrulaması için gerekli olan şifre değerini belirtir. | - | - | - | Hayır |
+| DigitalSignature.TimeStamp.Timeout | Zaman damgası için zaman aşımı süresini belirten parametredir. | False | - | - | Hayır |
+| DigitalSignature.TimeStamp.UserId | Zaman damgasının kimlik doğrulaması için gerekli olan kullanıcı adı değerini belirtir. | - | - | - | Hayır |
+| DigitalSignature.TimeStamp.Visible | Sistemde zaman damgası kullanılan gridlerde zaman damgası kolonunu göstermek, arayüzde damga butonlarını aktifleştirmek ve belge üzerindeki zaman damgalarının sayılarını göstermek için kullanılan parametredir. | False | True | False | Hayır |
+| DigitalSignature.TimeStamp.WhiteList | "," İle Ayrılarak belirtilir. Arşiv zaman damgası için geçerli algoritmaları belirttiğimiz parametredir. Eğer damga algoritması bu listede yer alıyorsa tekrar damgalanmaz, varolan damga hala geçerlidir. | - | - | - | Hayır |
+| DigitalSignature.TokenAuthentication.AskPinCode | Dijital İmza pininin sürekli sorulup/sorulmayacağını belirtir. | False | True | False | Hayır |
+| DigitalSignature.TokenAuthentication.Enable | Login ekranında dijital imza ile giriş yapabilmeyi sağlayan parametredir. | False | True | False | Hayır |
+| DigitalSignature.UseProxy | Sistemde dijital imza için proxyi aktifleştirip/pasifleştiren parametredir. | False | True | False | Hayır |
+| DigitalSignature.UserCertficateSealProperty | Elektronik mühür numarasının kullanıcı üzerinde hangi özellikte tutulduğunu belirten parametredir. | - | - | - | Hayır |
+| DigitalSignature.VerifyBeforeSigning | İmzadan önce dijital imzanın doğruluğunu ve geçerliliğinin kontrolüne zorlayan parametredir. | False | True | False | Hayır |
+| DocumentManagement.AlphabeticVersionCharacterSet | "," İle ayrılarak belirtilmelidir. Sistemdeki doküman versiyonlama yapısını alfabetik hale getirmek için kullanılan parametredir. | - | - | A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z | Hayır |
+| DocumentManagement.CacheLimit | Byte cinsinden belirtilir. Doküman yönetim sisteminin varsayılan olarak redis cache limitini belirten parametredir. | 1073741824 | - | 2147483648 | Hayır |
+| DocumentManagement.CheckWritePermissionForUnpublishedFile | Yayınlanmamış doküman üzerinde işlem yapabilmek için yazma yetkisini kontrol edip etmeyeceğini belirten parametredir. | False | True | False | Hayır |
+| DocumentManagement.Comparison.BasePath | Karşılaştırma ekranındaki viewerların base dizinini belirten parametredir. | - | - | http://localhost/BimserViewer/ | Hayır |
+| DocumentManagement.Comparison.ServicePath | Karşılaştırma ekranındaki viewerların servis dizinini belirten parametredir. | - | - | http://localhost/BimserViewerService/ViewerService.svc | Hayır |
+| DocumentManagement.Compression.Custom | Doküman yönetim sisteminde dokümanların sıkıştırılıp sıkıştırılmayacağını belirten parametredir. | False | True | False | Hayır |
+| DocumentManagement.Compression.CustomParameters | Key-Value şeklinde belirtilir. Dokümanları sıkıştırırken ekstra parametre kullanmamız gerektiğinde kullanılan parametredir. | - | - | - | Hayır |
+| DocumentManagement.Compression.ProviderAssembly | Doküman yönetim sisteminde dokümanları sıkıştırmak için hangi custom DLL'in kullanılacağını belirten parametredir. | - | - | - | Hayır |
+| DocumentManagement.Compression.ProviderType | Doküman yönetim sisteminde dokümanları sıkıştıran sağlayıcının tipini belirten parametredir. | - | - | - | Hayır |
+| DocumentManagement.CustomDownloadModuleName | Doküman yönetiminde dokümanı indirebilmek için ekstra özelleştirilmiş bir buton eklenmek istendiğinde modül adını belirten parametredir. BrowserPlugins.***.ModuleAssembly ve BrowserPlugins.***.CustomDownload parametreleri ile birlikte çalışmaktadır. (*** Alanlara bu parametrenin adı verilmektedir.) | - | - | - | Hayır |
+| DocumentManagement.CustomUploadModuleName | DocumentManagement.ShowCustomBrowserButton parametresi ile birlikte kullanılır. Doküman yönetim sistemine özelleştirilmiş bir browser buton eklemek için kullanılan parametredir. Özelleştirilmiş butona isim verilmesini sağlar. | - | - | - | Hayır |
+| DocumentManagement.DocumentOpenerEnabled | Doküman yönetim sisteminde viewerda ki ribbon bar'a "dokümanı aç" butonunu ekleyen parametredir. | False | True | False | Hayır |
+| DocumentManagement.Encryption.Custom | Doküman yönetim sisteminde dokümanların encrypt edilip edilmeyeceğini belirten parametredir. | False | True | False | Hayır |
+| DocumentManagement.Encryption.CustomParameters | Key-Value şeklinde belirtilir. Dokümanları encrypt ederken ekstra parametre kullanmamız gerektiğinde kullanılan parametredir. | - | - | - | Hayır |
+| DocumentManagement.Encryption.Key | Doküman yönetim sisteminde dokümanları encrypt ederken özel bir key kullanılacağı durumda keyin belirtildiği parametredir. En az 32 karakter olmalıdır. | - | - | Gizlilik neticesinde belirtilemiyor | Hayır |
+| DocumentManagement.Encryption.ProviderAssembly | Doküman yönetim sisteminde dokümanları encrypt etmek için hangi custom DLL'in kullanılacağını belirten parametredir. | - | - | - | Hayır |
+| DocumentManagement.Encryption.ProviderType | Doküman yönetim sisteminde dokümanları encrypt ederken sağlayıcının tipini belirten parametredir. | - | - | - | Hayır |
+| DocumentManagement.FileDataCachingSizeLimit | KB Cinsinden belirtilir. Doküman yönetim sisteminde dosya verilerinin redis cache limitini belirten parametredir. | - | - | 524288 | Hayır |
+| DocumentManagement.FilePartSize | Byte cinsinden belirtilir. Doküman yönetim sistemi dokümanları parçalayarak sakladığı için her bir dokümanın parçasının maksimum boyutunu belirten parametredir. | 1 | - | 1048576 | Hayır |
+| DocumentManagement.FormTemplateVersionManagement | Doküman yönetim sisteminde süreç formunun şablon versiyonlama yapısını aktifleştirip/pasifleştiren parametredir. DOCUMENTS tablosundaki TEMPLATEVERSION kolonunu doldurmaya yarar. | False | True | False | Hayır |
+| DocumentManagement.HistoryWriterPeriod | Milisaniye cinsinden belirtilir. History Cache'e yazılırken ne kadar süre bekleyeceğini belirten parametredir. | 1 | - | 15000 | Hayır |
+| DocumentManagement.Indexing.EndTime | Indexleme işleminin periyodik olarak saat kaçta başlayacağını belirten parametredir. 00:00 Formatında girilmelidir. | - | - | - | Hayır |
+| DocumentManagement.Indexing.ExcludedPattern | Regex olarak girilir. Indexlenmesi istenmeyen bir dizinin regexini belirten parametredir. Bu regexe uyan path indexlenmez. | - | - | - | Hayır |
+| DocumentManagement.Indexing.ExecutionLogsEnable | Indexleme sırasında loglama yapılıp/yapılmayacağını belirten parametredir. | False | True | False | Hayır |
+| DocumentManagement.Indexing.IndexingFileCountPerSession | Her bir Indexleme oturumunda maksimum kaç doküman indexlenebileceğini belirten parametredir. | False | - | -1 | Hayır |
+| DocumentManagement.Indexing.IndexingFileDescriptionCountPerSession | Her bir Indexleme oturumunda maksimum kaç doküman açıklamasının indexlenebileceğini belirten parametredir. | 1 | - | 200 | Hayır |
+| DocumentManagement.Indexing.IndexingPeriod | Saniye cinsinden belirtilir. Her bir işleminin kaç saniye gecikmeli başlayacağını belirten parametredir. | False | - | False | Hayır |
+| DocumentManagement.Indexing.IndexingStartUpDelay | Saniye cinsinden belirtilir. Indexleme oturumunun başlamadan kaç saniye bekleyeceğini belirten parametredir. | False | - | False | Hayır |
+| DocumentManagement.Indexing.IndexingWorkflowFileCountPerSession | Her bir Indexleme oturumunda maksimum kaç Worfklow dokümanının indexlenebileceğini belirten parametredir. | - | - | False | Hayır |
+| DocumentManagement.Indexing.MaximumIndexSearchResultCount | Indexlenmiş veri üzerinde arama yaparken kaç kayıt bulduğunda duracağını belirten parametredir. | 1 | - | 250 | Hayır |
+| DocumentManagement.Indexing.OCR.***.Languages | *** Alana hangi makine üzerinde çalışıyorsa onun adı yazılır. "," İle ayrılarak belirtilmelidir. OCR Uygulanacak olan doküman dillerin belirtildiği parametredir. | - | - | Language.Default | Hayır |
+| DocumentManagement.Indexing.OCR.***.OCREngine | *** Alana hangi makine üzerinde çalışıyorsa onun adı yazılır. Hangi OCR Engine kullanılacaksa onun adı yazılır. | Capture | Tesseract | Capture | Hayır |
+| DocumentManagement.Indexing.OCR.***.PreferredLibraries | *** Alana hangi makine üzerinde çalışıyorsa onun adı yazılır. OCR işleminde önceliklendirilecek kütüphaneleri belirtememizi sağlar. | - | - | - | Hayır |
+| DocumentManagement.Indexing.OCR.EnginePath | OCR işlemini yapacak olan ABBYY SDK Fine Reader Engine'in konumunu belirten parametredir. | - | - | - | Hayır |
+| DocumentManagement.Indexing.OCR.Extensions | "," İle ayrılarak belirtilmelidir. OCR Uygulanacak olan doküman uzantılarının belirtildiği parametredir. | - | - | - | Hayır |
+| DocumentManagement.Indexing.OCR.Languages | "," İle ayrılarak belirtilmelidir. OCR Uygulanacak olan doküman dillerin belirtildiği parametredir. | - | - | Language.Default | Hayır |
+| DocumentManagement.Indexing.OCR.PreferredLibraries | OCR işleminde önceliklendirilecek kütüphaneleri belirtememizi sağlar. | - | - | - | Hayır |
+| DocumentManagement.Indexing.OCR.Scheduled | OCR İşleminin Schedule ile periyodik bir yapıya bağlanıp/bağlanmadığını belirten parametredir. Eğer bu parametre aktif ise DocumentManagement.Indexing.OCR.StartTime ve DocumentManagement.Indexing.OCR.StopTime parametrelerine de değer atanmalıdır. | False | True | False | Hayır |
+| DocumentManagement.Indexing.OCR.StartTime | OCR işleminin periyodik olarak saat kaçta başlayacağını belirten parametredir. 00:00 Formatında girilmelidir. | - | - | 00:00:00 | Hayır |
+| DocumentManagement.Indexing.OCR.StopTime | OCR işleminin periyodik olarak saat kaçta biteceğini belirten parametredir. 00:00 Formatında girilmelidir. | - | - | 23:59:00 | Hayır |
+| DocumentManagement.Indexing.OCR.UseOcrForScannedPdf | Taranmış PDF dosyaları için de OCR Uygulanmasına izin veren parametredir. | False | True | False | Hayır |
+| DocumentManagement.Indexing.StartTime | Indexleme işleminin periyodik olarak saat kaçta biteceğini belirten parametredir. 00:00 Formatında girilmelidir. | - | - | - | Hayır |
+| DocumentManagement.Limits.Download.MaximumFileSize | Byte Cinsinden belirtilir. Doküman yönetim sisteminden maksimum ne kadar büyüklükte dosya indirilebileceğini belirten parametredir. | - | - | 1073741824 | Hayır |
+| DocumentManagement.Limits.Download.MaximumFolderSize | Byte Cinsinden belirtilir. Doküman yönetim sisteminden maksimum ne kadar büyüklükte klasörler indirilebileceğini belirten parametredir. | - | - | 2147483648 | Hayır |
+| DocumentManagement.Limits.PageSize | Doküman yönetim sistemindeki öğelerin bir sayfada listelenirken kaç öğe listeleneceğini belirten parametredir. | False | 100 | 25 | Hayır |
+| DocumentManagement.Limits.Upload.MaximumFileSize | Byte Cinsinden belirtilir. Doküman yönetim sistemine maksimum ne kadar büyüklükte dosyalar yüklenebileceğini belirten parametredir. | - | - | 524288000 | Hayır |
+| DocumentManagement.Limits.Upload.MaximumFolderSize | Byte Cinsinden belirtilir. Doküman yönetim sistemine maksimum ne kadar klasör yüklenebileceğini belirten parametredir. | - | - | 1073741824 | Hayır |
+| DocumentManagement.LocalStoragesTempPath | Doküman yönetim sisteminin temp dosyalarını nereye kaydedip nereden işlem yapacağını belirttiğimiz dizindir. Sunucu üzerinde uygun bir konum seçilmelidir. | - | - | DM'in varsayılan sunucu konumu | Hayır |
+| DocumentManagement.LogDetails | Bu parametrenin çalışabilmesi için Logging.LogDMService parametresi de aktifleştirilmelidir. Doküman yönetim sistemindeki logları daha detaylı bir şekilde "DM Service Details" seçeneği altında loglar. | False | True | True | Hayır |
+| DocumentManagement.MaximumContentCountPerFile | Doküman yönetim sisteminde bir dokümanın maksimum içerik sayısını belirten parametredir. | 1 | - | 100 | Hayır |
+| DocumentManagement.MaximumDataPartCount | MB cinsinden belirtilir. Doküman yönetim sistemi dokümanları parçalayarak sakladığı için bir doküman maksimum kaç parçaya ayrılabileceğini belirten parametredir. | 1 | - | 1024 | Hayır |
+| DocumentManagement.MaximumDataSizeForIndex | Byte cinsinden belirtilir. Indexleme işlemi sırasında işlenebilecek maksimum doküman boyutunu belirtir. | 1 | - | 26214400 | Hayır |
+| DocumentManagement.MaximumFileCountInAFolder | DocumentManagement.MaximumFileCountInAFolderCheck parametresi aktifleştirildiğinde doküman yönetim sisteminde bir klasör içerisinde maksimum kaç dosya olabileceğini belirten parametredir.  | 1 | - | 100000 | Hayır |
+| DocumentManagement.MaximumFileCountInAFolderCheck | Doküman yönetim sisteminde bir klasör içerisinde maksimum kaç doküman olabileceğinin kontrolünü aktifleştirip/pasifleştiren parametredir. | False | True | False | Hayır |
+| DocumentManagement.MaximumFileIdCountForGetFiles | Toplu doküman işlemlerinde maksimum kaç doküman üzerinde işlem yapılabileceğini belirten parametredir. | 1 | - | 1000 | Hayır |
+| DocumentManagement.MaximumFolderCountInAFolder | Doküman yönetim sisteminde bir klasör içerisinde maksimum kaç klasör olabileceğini belirten parametredir. | 1 | - | 100000 | Hayır |
+| DocumentManagement.MaximumLibraryCount | Doküman yönetim sisteminde maksimum oluşturulabilecek kütüphane sayısını belirten parametredir. | 1 | - | 1000 | Hayır |
+| DocumentManagement.MaximumMajorVersion | Doküman yönetim sisteminde bir dokümana verilebilecek maksimum majör versiyon sayısını belirtir. | 1 | - | 99 | Hayır |
+| DocumentManagement.MaximumMinorVersion | Doküman yönetim sisteminde bir dokümana verilebilecek maksimum minör versiyon sayısını belirtir. | False | - | 99 | Hayır |
+| DocumentManagement.MaximumObjectNameLength | Doküman yönetim sistemi öğelerinin isimlerinin maksimum kaç karakter olacağını belirten parametredir. | 1 | - | 250 | Hayır |
+| DocumentManagement.MaximumPathLevel | Doküman yönetim sisteminde bir kütüphane içerisinde iç içe maksimum ne kadar kırılım olabileceğini belirten parametredir. | 1 | - | 25 | Hayır |
+| DocumentManagement.MaximumRelationsCountPerFile | Doküman yönetim sisteminde bir dokümanın maksimum yapabileceği ilişkili doküman sayısını belirten parametredir. | 1 | - | 100 | Hayır |
+| DocumentManagement.MaximumSearchResultCount | Doküman yönetim sisteminde arama yapılırken arama sonucunda maximum kaç dosya gösterileceğini belirten parametredir. Indexlenmiş öğeler için girilen değerin 2 katını baz alır. | 1 | - | 1000 | Hayır |
+| DocumentManagement.MultiContentEnable | Doküman yönetim sisteminde bir dokümanın birden fazla içeriğinin olup olamayacağını belirten parametredir. | False | True | True | Hayır |
+| DocumentManagement.NetworkLocationCanChange | Web arayüzünden fiziksel lokasyonun değiştirilip/değiştirilemeyeceğini belirten parametredir. | False | True | False | Hayır |
+| DocumentManagement.NewDocumentPluginModuleName | Doküman yönetimine yeni dosya eklemek için plugin kullanmak istediğimizde pluginin adını verdiğimiz parametredir. | - | - | - | Hayır |
+| DocumentManagement.RecycleBinEnabled | Doküman yönetim sisteminde geri dönüşüm kutusunu aktifleştirir ve silinen öğelerin ilk önce buraya düşmesini sağlar. | False | True | False | Hayır |
+| DocumentManagement.ReferenceFileEnable | Ribbon barda referans dosya butonunun gösterilip/gösterilmeyeceğini belirten parametredir. | False | True | False | Hayır |
+| DocumentManagement.ShowBrowserButton | Doküman yönetim sistemine dosya yüklerken browse butonunun gözüküp/gözükmeyeceğini belirten parametredir. | False | True | True | Hayır |
+| DocumentManagement.ShowComparisonButton | Doküman yönetim sisteminde karşılaştırma butonunu aktifleştirip/pasifleştiren parametredir. | False | True | True | Hayır |
+| DocumentManagement.ShowCustomBrowserButton | Doküman yönetim sistemine özelleştirilmiş bir browser butonu eklemek için kullanılan parametredir. Kullanılabilmesi için DocumentManagement.CustomUploadModuleName ve BrowserPlugin.***.ModuleAssembly (*** alana DocumentManagement.CustomUploadModuleName değeri verilmeli) parametreleri doldurulmalıdır. | False | True | True | Hayır |
+| DocumentManagement.ShowRecycleBinFolders | Doküman yönetim sisteminde DocumentManagement.RecycleBinEnabled parametresini aktifleştirdiğimizde geri dönüşüm kutusu içindeki klasörleri görüp/göremeyeceğimizi belirten parametredir. | False | True | False | Hayır |
+| DocumentManagement.ShowScanButton | Doküman yönetim sistemine dosya yüklerken tarama butonunun gözüküp/gözükmeyeceğini belirten parametredir. | False | True | True | Hayır |
+| DocumentManagement.SystemCheckoutEnable | Doküman yönetim sisteminde doküman checkout özelliğini aktifleştiren parametredir. | False | True | True | Hayır |
+| DocumentManagement.UIDefaultSortType | Doküman yönetimi gridlerinin kolonlarından hangisinin varsayılan olarak nasıl sıralanacağını belirten parametredir. 8 Seçeneği vardır.         CreateDateDesc=0, CreateDateAsc=1, NameAsc=2, NameDesc=3, OwnerAsc=4, OwnerDesc=5, ModifyDateDesc=6, ModifyDateAsc=07 | False | 7 | - | Hayır |
+| DocumentManagement.VisibleColumns | "," İle ayrılarak belirtilir. Doküman yönetim sistemi üzerindeki gridde hangi kolonların gösterilip gösterilmeyeceğini belirten parametredir. | - | - | - | Hayır |
+| DocumentViewer.ViewerEncryptionKey | DocumentViewer parametrelerini şifrelemek için kullanılan parametredir. | - | - | Gizlilik neticesinde belirtilemiyor | Hayır |
+| DigitalSignature.TimeStamp.ShowOnGrid | Dokümanın zaman damgası olduğunda bunu DM gridi üzerinde göstermeye yarayan parametredir. | False | True | False | Hayır |
+| DocumentManagement.CheckDigitalEquivalents | Upload ve CreateDocument işlemlerinde hash karşılaştırması yapılıp yapılmayacağını belirten parametredir. | False | True | False | Evet |
+| DocumentManagement.ContentStorages.***.Database | DM Özellikler Yönetim tabında bulunan storage ayarı için database bilgisi belirten parametredir. | - | - | default | Evet |
+| DocumentManagement.ContentStorages.***.DisableIndexing | Storage için indexlemeyi devredışı bırakan parametredir. | False | True | False | Hayır |
+| DocumentManagement.ContentStorages.***.LocationType | Storage local - remote ayarının yapıldığı parametredir. | Local | Remote | Local | Evet |
+| DocumentManagement.ContentStorages.***.Path | Storage path bilgisini belirten parametredir. | - | - | - | Hayır |
+| DocumentManagement.ContentStorages.***.ServerName | Storage ServerName bilgisini belirten parametredir. | - | - | localhost | Evet |
+| DocumentManagement.ContentStorages.***.StorageSize | Storage size bilgisini belirten parametredir. | False | - | - | Hayır |
+| DocumentManagement.ContentStorages.***.StorageType | Storage tipini belirten parametredir. FileSytem - Database olarak yer alır. | Database | FileSystem | Database | Evet |
+| DocumentManagement.ContentStorages.***.TableName | Storage için tablo ismini belirten parametredir. | - | - | FSFILEDATAPARTS | Evet |
+| DocumentManagement.ContentStorages.***.WebServiceAddress | Storage web servis bağlantısını belirten parametredir. | - | - | http://localhost/eba.net.dm | Evet |
+| DocumentManagement.Indexing.SearchWithAnd | Index araması yaparken boşlukları "ve" yada "veya" olarak tanımlanmasını sağlayan parametredir. | False | True | False | Hayır |
+| DocumentManagement.DocumentManagement.AlwaysExpandAllGroups | Grid üzerindeki gruplamanın daima expand olarak gelip gelmeyeceğini belirten parametredir. | False | True | True | Hayır |
+| EBYS.KEP.Enabled | Web Arayüzde KEP menüsüne ulaşabilmeyi ve KEP gönderimi yapabilmeyi sağlayan parametredir. | False | True | False | Evet |
+| Export.Pdf.Font.Default | Workflow studio tarafında bulunan Export To PDF nesnesinin PDF oluştururken hangi fontu kullacağını belirten parametredir. | - | - | Tahoma | Evet |
+| eBA3Entegration.Database.ConnectionString | eBA3 üzerindeki yapıları eBA4'e aktarmak için kullanılan yapıda ki kaynağın connection string parametresidir. | - | - | - | Hayır |
+| eBA3Entegration.Database.Provider | eBA3 üzerindeki yapıları eBA4'e aktarmak için kullanılan yapıda kaynak veri tabanının sağlayıcısının belirtildiği parametredir. Verilebilecek değerler: System.Data.OleDb, System.Data.SqlClient, System.Data.Odbc, System.Data.OracleClient, Oracle.DataAccess.Client, MySql.Data.MySqlClient | - | - | - | Hayır |
+| eBA3Entegration.Database.ServerType | eBA3 üzerindeki yapıları eBA4'e aktarmak için kullanılan yapıda kaynak veri tabanının tipini belirten parametredir. | SqlServer | Oracle | - | Hayır |
+| eBA3Entegration.Enable | eBA3 üzerindeki yapıları eBA4'e aktarmayı sistemde aktifleştirmek için kullanılan parametredir. | False | True | False | Hayır |
+| eBA3Entegration.Url | eBA3 üzerindeki yapıları eBA4'e aktarmak için kaynağın URL parametresidir. | - | - | - | Hayır |
+| EBYS.CheckDocumentVisibility | EBYS Evrakının görünebilirliğini kontrol etmesini sağlayan parametredir. | False | True | False | Hayır |
+| EBYS.DocumentVisibilityField | EBYS Evrakının görünebilirliğini hangi alandan kontrol edeceğini belirten parametredir. | - | - | - | Hayır |
+| EBYS.Kurum.Bakanlik | Kurumun bağlı olduğu bakanlığı tutan parametredir. | - | - | - | Hayır |
+| EBYS.Kurum.CiktiParafIcersin | Çıktının paraf içermesi durumunu aktifleştirir/pasifleştirir. | False | True | False | Hayır |
+| EBYS.Kurum.EDevletKurumKodu | Evrak doğrulayabilmek için kurumun e-Devlet kodunu tutan parametredir. | - | - | - | Hayır |
+| EBYS.Kurum.EDevletPassword | Evrak doğrulayabilmek için kurumun e-Devlet kullanıcısının şifresini tutan parametredir. | - | - | - | Hayır |
+| EBYS.Kurum.EDevletUser | Evrak doğrulayabilmek için kurumun e-Devlet kullanıcısını tutan parametredir. | - | - | - | Hayır |
+| EBYS.Kurum.Kod | Kurumun yasal kodunu tutan parametredir. | - | - | - | Hayır |
+| EBYS.Kurum.OlurTarihi | EBYS'de Olurların tarih içermesini açan/kapatan parametredir. | False | True | False | Hayır |
+| EBYS.Kurum.UstYaziOzellestirmeFormId | Üst Yazının özelleştirme bilgilerini tutan eBA Formunun ID değerini belirtir. | False | - | - | Hayır |
+| EBYS.Kurum.UstYaziParafIcersin | Üst yazının paraf içermesi durumunu aktifleştirir/pasifleştirir. | False | True | False | Hayır |
+| EBYS.Kurum.UstYaziTasnifDisiIcersin | Üst yazının tasnif dışı içermesi durumunu aktifleştirir/pasifleştirir. | False | True | False | Hayır |
+| EBYS.PackageVersion | EYP'lerinin hangi versiyonda işleneceğini belirten parametredir. | 1 | 2 | 2 | Hayır |
+| EBYS.SignDocumentBeforeCreatePackage | EYP Paketi oluşturulmadan önce dokümanın imzalanıp/imzalanmayacağını belirten parametredir. | False | True | False | Hayır |
+| EBYS.VerifyMessageField | Doküman üzerindeki doğrulama alanıdır. | - | - | - | Hayır |
+| Globalization.Culture | Sistemin varsayılan culture bilgisini belirtir, en-US veya tr-TR gibi belirtilmelidir. | - | - | en-US | Hayır |
+| Globalization.LongTimePattern | Sistem kullanılacak uzun saat formatını belirtir. | - | - | - | Hayır |
+| Globalization.NumberDecimalSeparator | Sistemde ondalık değerleri ayırmak için hangi karakterin kullanılacağını belirten parametredir. | - | - | . | Hayır |
+| Globalization.NumberGroupSeparator | Sistemde sayısal değerlerin yüzlük basamaklara ayırabilmek için hangi karakterin kullanılacağını belirten parametredir. | - | - | , | Hayır |
+| Globalization.ShortDatePattern | Sistemde kullanılacak kısa tarih formatını belirtir. | - | - | - | Hayır |
+| Globalization.UserCanChange | Kullanıcının web arayüzdeki bölgesel ayarları düzenleyebilmesine olanak sağlar. | False | True | True | Hayır |
+| HumanResources.AllowImportedRecordsEdit | Dışarıdan import edilmiş organizasyon birimlerinin düzenlenmesine izin veren parametredir. | False | True | False | Evet |
+| HumanResources.AllowImportStatusChange | Organizasyon birimi üzerindeki Import Status alanının düzenlenebilmesine izin verir. | False | True | False | Evet |
+| HumanResources.Entegration | ImportStatus alanının tüm sistemde aktif/pasif hale getirir. | False | True | False | Evet |
+| HumanResources.MultiCompany | Organizasyon birimlerinin birden fazla şirket altında aynı anda bulunması özelliğini açar/kapatır. | False | True | False | Evet |
+| HumanResources.Transfer.IntegrationConnection | HR Transferin yapılabilmesi için, kaynaktan gerekli veriyi getiren sorguları barındıran eBA Integration Connection'ın adını belirtir. | - | - | - | Evet |
+| HumanResources.Transfer.Source | HR Transferin kaynağının tipini belirttiğimiz parametredir. Boş bırakılırsa hata verecektir. | xml | database | integration | Evet |
+| HumanResources.Transfer.TransferCompanies | HR Transfer sırasında şirketlerin aktarılıp/aktarılmayacağını belirtir. | False | True | False | Evet |
+| HumanResources.Transfer.TransferProperties | HR Transfer sırasında özelliklerin aktarılıp/aktarılmayacağını belirtir. | False | True | False | Evet |
+| HumanResources.Maintenance.Defaults.Department | HR Transfer sırasında bir departman silindiyse onun yerine hangi departmanın yazılacağını belirten varsayılan departman kodudur. | - | - | - | Hayır |
+| HumanResources.Maintenance.Defaults.Position | HR Transfer sırasında bir pozisyon silindiyse onun yerine hangi pozisyonun yazılacağını belirten varsayılan pozisyon kodudur. | - | - | - | Hayır |
+| HumanResources.Maintenance.Defaults.Profession | HR Transfer sırasında bir ünvan silindiyse onun yerine hangi ünvanın yazılacağını belirten varsayılan ünvan kodudur. | - | - | - | Hayır |
+| HumanResources.Maintenance.Defaults.User | HR Transfer sırasında bir kullanıcı silindiyse onun yerine hangi kullanıcının yazılacağını belirten varsayılan kullanıcı kodudur. | - | - | - | Hayır |
+| HumanResources.OnlyPropertyEdit | Organizasyon birimi üzerindeki özelliklerin düzenlenebilmesine izin verir. | False | True | False | Hayır |
+| HumanResources.SetEmployementEndOnPassive | HR Transfer sırasında eğer bir kullanıcının durumu pasif olarak değiştirildiyse employement end tarihini o günün tarihini yazmasını sağlar. Açık olmadığı zaman employemen end tarihi boş bırakılır. | False | True | False | Hayır |
+| HumanResources.Transfer.CreateGroupsFromCompanies | HR Transfer sırasında şirket tabanlı grupların oluşturulmasına izin veren parametredir. | False | True | False | Hayır |
+| HumanResources.Transfer.CreateGroupsFromPoscodes | HR Transfer sırasında pozisyon tabanlı grupların oluşturulmasına izin veren parametredir. | False | True | False | Hayır |
+| HumanResources.Transfer.LogHRTransferDetailsToDB | HR Transfer sırasında gerçekleşen durumların DB'de ki HRTRANSFERDETAILS tablosuna yazılmasını sağlar.  | False | True | False | Hayır |
+| HumanResources.Transfer.MultiplePositionsEnable | HR Transfer sırasında bir pozisyondan birden çok olmasına izin veren parametredir. | False | True | False | Hayır |
+| HumanResources.Transfer.Reporting.Enable | HR Transfer raporlarının mail ile gönderimini açmak/kapatmak için kullanılan parametredir. | False | True | False | Hayır |
+| HumanResources.Transfer.Reporting.RecipientEmails | HR Transfer raporlarının mail ile gönderimini sağlamak için hangi mail adreslerine rapoarların gideceğini belirten parametredir. Virgül ile ayrılmalıdır. | - | - | - | Hayır |
+| HumanResources.Transfer.Reporting.SendLogFile | HR Transfer sırasında gerçekleşen durumların log dosyasını mail ile göndermek için kullanılan parametredir. | False | True | False | Hayır |
+| HumanResources.Transfer.Reporting.SendOnlyFailures | HR Transfer sırasında sadece alınan hataların rapolarını mail olarak iletilmesi istendiğinde kullanılan parametredir.  | False | True | False | Hayır |
+| HumanResources.Transfer.TransferGroups | HR Transfer sırasında grupların aktarılıp/aktarılmayacağını belirtir. | False | True | False | Hayır |
+| HumanResources.Transfer.TransferPositions | HR Transfer sırasında pozisyonların aktarılıp/aktarılmayacağını belirtir. | False | True | False | Hayır |
+| HumanResources.Transfer.UserIdCulture | HR Transfer sırasında ID değerinin hangi dilde dönüştürüleceğini belirtir. HumanResources.Transfer.UserIdUpperLower parametresi ile birlikte kullanılmak zorundadır. | - | - | - | Hayır |
+| HumanResources.Transfer.UserIdUpperLower | HR Transfer sırasında ID değerinin tamamen büyük yada tamamen küçük olarak dönüştürülmesini sağlar. HumanResources.Transfer.UserIdCulture parametresi ile birlikte kullanılmak zorundadır. | upper | lower | - | Hayır |
+| HumanResources.Transfer.UseTransaction | HR Transfer sırasında transaction yapısının kullanılıp kullanılmayacağını belirtir. | False | True | False | Hayır |
+| Kep.Providers.***.Assembly | *** Alan, KEP sağlayıcısının adını belirtir. KEP için hangi sağlayıcı kullanılıyorsa onun DLL'inin adını verdiğimiz parametredir. Bu DLL Common altında bulunur. | - | - | - | Evet |
+| Kep.Providers.***.ClassName | *** Alan, KEP sağlayıcısının adını belirtir. KEP için hangi sağlayıcı kullanılıyorsa onun DLL'inin içinde bulunan sınıfın adını verdiğimiz parametredir. | - | - | - | Evet |
+| Kep.Providers.***.ReceiveServiceUrl | *** Alan, KEP sağlayıcısının adını belirtir. KEP alımı için hangi sağlayıcı kullanılıyorsa onun endpointini belirttiğimiz parametredir. | - | - | - | Evet |
+| Kep.Providers.***.SendServiceUrl | *** Alan, KEP sağlayıcısının adını belirtir. KEP gönderimi için hangi sağlayıcı kullanılıyorsa onun endpointini belirttiğimiz parametredir. | - | - | - | Evet |
+| Kep.Providers.***.ServiceUrl | *** Alan, KEP sağlayıcısının adını belirtir. KEP üzerinden elektronik yazışma için gerekli olan URL'i belirten parametredir. | - | - | - | Evet |
+| Kep.GlobalLogPath | KEP alma/gönderme işlemlerinin loglarının tutulacağı konumu belirten parametredir. | - | - | - | Hayır |
+| Kep.Providers.***.ClientId | *** Alan, KEP sağlayıcısının adını belirtir.KEP için gerekli olan ClientId değerini tutar. | - | - | - | Hayır |
+| Kep.Providers.***.ClientRedirectUri | *** Alan, KEP sağlayıcısının adını belirtir.KEP için gerekli olan ClientRedirectUri değerini tutar. | - | - | - | Hayır |
+| Kep.Providers.***.ClientSecret | *** Alan, KEP sağlayıcısının adını belirtir.KEP için gerekli olan ClientSecret değerini tutar. | - | - | - | Hayır |
+| Kep.Providers.***.Credentials.???.Caption | *** Alanı, KEP sağlayıcısının adını, ??? Alanı credential'ın adını belirtir. Credential'ın başlığını belirten parametredir. | - | - | - | Hayır |
+| Kep.Providers.***.Credentials.???.OrderNumber | *** Alanı, KEP sağlayıcısının adını, ??? Alanı credential'ın adını belirtir. Credential'ın sırasını belirten parametredir. | - | - | - | Hayır |
+| Kep.Providers.***.Credentials.???.PasswordMode | *** Alanı, KEP sağlayıcısının adını, ??? Alanı credential'ın adını belirtir. Credential'ın şifreyle korunacağını belirten parametredir. | False | True | False | Hayır |
+| Kep.Providers.***.Credentials.???.Type | *** Alanı, KEP sağlayıcısının adını, ??? Alanı credential'ın adını belirtir. Credential'ın tipini belirten parametredir. | - | - | - | Hayır |
+| Kep.Providers.***.LogPath | *** Alan, KEP sağlayıcısının adını belirtir. UETS Loglarının nereye yazılacağını belirten parametredir. | - | - | - | Hayır |
+| Kep.Providers.***.ServerAuthorizationUri | *** Alan, KEP sağlayıcısının adını belirtir.KEP Yetkilendirmesi yapılacak olan URL'i belirten parametredir. | - | - | - | Hayır |
+| Kep.Providers.***.ServerTokenUri | *** Alan, KEP sağlayıcısının adını belirtir.KEP için gerekli olan Token değerini alacak olan endpointin değerini tutar. | - | - | - | Hayır |
+| Kep.Providers.***.SignText | *** Alan, KEP sağlayıcısının adını belirtir. KEP sağlayıcısı için imza metninin bulunduğu parametredir. | - | - | - | Hayır |
+| Kep.ReceiverProfiles.***.Enabled | *** Alan, KEP sağlayıcısının adını belirtir. KEP Alım profilini aktifleştiren/pasifleştiren parametredir. | False | True | False | Hayır |
+| Kep.ReceiverProfiles.***.GetOnlyUnreadMails | *** Alan, KEP sağlayıcısının adını belirtir. KEP Alım profilleri için yalnızca okunmayan KEP mesajlarının alınmasını sağlayan parametredir. | False | True | False | Hayır |
+| Kep.ReceiverProfiles.***.Parameters.Body | *** Alan, KEP sağlayıcısının adını belirtir. KEP Alımı sırasında bir süreç başlayacaksa sürece gönderilecek olan KEP mesaj içeriğidir. Bu değer süreç içerisinde aynı isimle bulunan public parametreye yazılır. | - | - | - | Hayır |
+| Kep.ReceiverProfiles.***.Parameters.Cc | *** Alan, KEP sağlayıcısının adını belirtir. KEP Alımı sırasında bir süreç başlayacaksa sürece gönderilecek olan CC içeriğidir. Bu değer süreç içerisinde aynı isimle bulunan public parametreye yazılır. | - | - | - | Hayır |
+| Kep.ReceiverProfiles.***.Parameters.EMLPath | *** Alan, KEP sağlayıcısının adını belirtir. KEP Alımı sırasında bir süreç başlayacaksa sürece gönderilecek olan EML dosyasının konumudur. Bu değer süreç içerisinde aynı isimle bulunan public parametreye yazılır. | - | - | - | Hayır |
+| Kep.ReceiverProfiles.***.Parameters.From | *** Alan, KEP sağlayıcısının adını belirtir. KEP Alımı sırasında bir süreç başlayacaksa sürece gönderilecek olan KEP mesajının kimden geldiğinin bilgisidir. Bu değer süreç içerisinde aynı isimle bulunan public parametreye yazılır. | - | - | - | Hayır |
+| Kep.ReceiverProfiles.***.Parameters.Subject | *** Alan, KEP sağlayıcısının adını belirtir. KEP Alımı sırasında bir süreç başlayacaksa sürece gönderilecek olan KEP mesaj konusudur. Bu değer süreç içerisinde aynı isimle bulunan public parametreye yazılır. | - | - | - | Hayır |
+| Kep.ReceiverProfiles.***.Parameters.To | *** Alan, KEP sağlayıcısının adını belirtir. KEP Alımı sırasında bir süreç başlayacaksa sürece gönderilecek olan KEP mesajının kime kısmıdır. Bu değer süreç içerisinde aynı isimle bulunan public parametreye yazılır. | - | - | - | Hayır |
+| Kep.ReceiverProfiles.***.StartProcess_ | *** Alan, KEP sağlayıcısının adını belirtir. KEP Alımı sırasında bir süreç başlayacaksa süreç adının tutulduğu parametredir. | - | - | - | Hayır |
+| Language.Default | Sistemde kullanılacak varsayılan dil seçeneğidir. | - | - | Turkish | Evet |
+| Language.Dictionaries | Sistemde varolan dil seçeneklerini belirten parametredir. "," karakteri ile ayrılarak girilmelidir. | - | - | English,Turkish | Evet |
+| Language.Languages.***.Description | *** Alanına sistemde bulunan diller girilir ve bu sayede Language.Languages paramtresi bir liste haline getirilir. Parametrenin kendisi *** alanına yazılan değerle aynı olmalıdır. | - | - | *** | Evet |
+| Locations.***.ContentStorage | *** Alana lokasyon adı verilir. Lokasyonun adının bilgisini tutar, yani *** alandaki değer ile aynı olmalıdır. | - | - | - | Hayır |
+| Language.Languages.***.Culture | *** Alana dilin adı gelmelidir. Dilin culture değerini (tr, en, de vs.) belirten parametredir. Bu değer set edildiğinde login olunan dil bilgisine göre otomatik olarak region bilgisini set eder.  | - | - | - | Hayır |
+| Language.UserCanChange | Kullanıcının web arayüzde dil seçeneklerini değiştirip değiştiremeyeceğini belirten parametredir. | False | True | True | Hayır |
+| MailServer.Profiles.EBA.DefaultSenderAddress | Sistemde gönderilen maillerde varsayılan olarak gözükecek mail adresidir. | - | - | - | Evet |
+| MailServer.Profiles.EBA.DefaultSenderName | Sistemde gönderilen maillerde varsayılan olarak gözükecek gönderici ismidir. | - | - | - | Evet |
+| MailServer.Profiles.EBA.DeleteMails | Bu parametre 0 olarak belirtilmişse gönderilen mailler MailServer.Profiles.EBA.MailsTable parametresinde belirtilen tablodan silinmektedir. -1 olarak belirtildiğinde silme işlemi yapmamaktadır. 0'dan büyük olarak belirtildiğinde verilen değer kadar gün önce gönderilen mailleri MailServer.Profiles.EBA.MailsTable parametresinde belirtilen tablodan silmektedir. | -1 | - | -1 | Evet |
+| MailServer.Profiles.EBA.MailsPerSession | Her bir mail gönderim oturumunda kaç mail göndereceğini belirten parametredir. | - | - | 10 | Evet |
+| MailServer.Profiles.EBA.Password | MailServer.Profiles.EBA.RequiresAuthentication parametresi aktifleştirildiğinde kullanılacak SMTP bilgisinin şifresini belirten parametredir. | - | - | - | Evet |
+| MailServer.Profiles.EBA.RequiresAuthentication | SMTP yapısını kurarken yapının kimlik doğrulama kullanıp kullanmayacağını belirten parametredir. | False | True | False | Evet |
+| MailServer.Profiles.EBA.RequiresSSLEncryption | SMTP yapısını kurarken yapının SSL kullanıp kullanmayacağını belirten parametredir. | False | True | False | Evet |
+| MailServer.Profiles.EBA.SmtpHost | SMTP sunucu bilgisini belirten parametredir. | - | - | localhost | Evet |
+| MailServer.Profiles.EBA.SmtpPort | SMTP sunucusunun port bilgisini belirten parametredir. | False | - | 25 | Evet |
+| MailServer.Profiles.EBA.TryCount | Bir mail gönderilmek istendiğinde hata ile karşılaşırsa kaç kere göndermeyi deneyeceğini belirten parametredir. | False | - | 5 | Evet |
+| MailServer.Profiles.EBA.UserName | MailServer.Profiles.EBA.RequiresAuthentication parametresi aktifleştirildiğinde kullanılacak  SMTP bilgisinin kullanıcı adını belirten parametredir. | - | - | - | Evet |
+| MailServer.Profiles.EBA.AttachmentSize | KB Cinsinden belirtilir. Mail eklerinin boyutlarının en çok ne kadar olabileceğini belirten parametredir. | - | - | False | Hayır |
+| MailServer.Profiles.EBA.BackupMails | Gönderilen maillerin yedeklenip yedeklenmeyeceğini belirten parametredir. Bu parametre true ise DeleteMails parametresi -1 olmalıdır. Beraber kullanılamazlar. MAILSENTLOGS tablosuna yedeklemektedir. | False | True | False | Hayır |
+| MailServer.Profiles.EBA.Database | MailServer işlemlerinin hangi veri tabanında gerçekleşeceğini belirttiğimiz parametredir. Genelde PRODUCTION yada TEST olarak belirtilmektedir. | - | - | default | Hayır |
+| MailServer.Profiles.EBA.IsTestMail | Gönderilen maillerin konu kısmına "(TEST)" değerini ekleyen parametredir. | False | True | False | Hayır |
+| MailServer.Profiles.EBA.MailAttachmentsTable | Mail eklerinin veri tabanında hangi tabloda tutulacağını belirten parametredir. | - | - | MAILATTACHMENTS | Hayır |
+| MailServer.Profiles.EBA.MailSizeExceededMessage | Mail eki gönderilirken MailServer.Profiles.EBA.AttachmentSize parametresinde ki değer aşıldığında bu parametredeki değer loglarda gösterilir. | - | - | There was attachment files. They are removed because mail size limit exceeded | Hayır |
+| MailServer.Profiles.EBA.MailsTable | Maillerin veri tabanında hangi tabloda tutulacağını belirten parametredir. | - | - | MAILS | Hayır |
+| MailServer.Profiles.EBA.OAuthClientId | MailServerda hangi OAuth Sağlayıcısı kullanılıyorsa onun ClientId değerini belirten parametredir. | - | - | - | Hayır |
+| MailServer.Profiles.EBA.OAuthClientSecret | MailServerda MailServer.Profiles.EBA.OAuthProvider parametresi Gmail olarak belirtildiğinde kullanılacak olan parametredir. | - | - | - | Hayır |
+| MailServer.Profiles.EBA.OAuthInstance | MailServerda MailServer.Profiles.EBA.OAuthProvider parametresi Office365 olarak belirtildiğinde kullanılacak olan instance parametresidir. | - | - | - | Hayır |
+| MailServer.Profiles.EBA.OAuthProvider | MailServerda hangi OAuth Sağlayıcısının kullanılacağını belirten parametredir. | Gmail | Office365 | - | Hayır |
+| MailServer.Profiles.EBA.OAuthRedirectUri | MailServerda MailServer.Profiles.EBA.OAuthProvider parametresi Office365 olarak belirtildiğinde kullanılacak yönlendirme parametresidir. | - | - | - | Hayır |
+| MailServer.Profiles.EBA.OAuthScopes | "," İle ayrılarak belirtilir. MailServerda OAuth Scopelarının belirtildiği parametredir. | - | - | - | Hayır |
+| MailServer.Profiles.EBA.OAuthTenantId | MailServerda MailServer.Profiles.EBA.OAuthProvider parametresi Office365 olarak belirtildiğinde kullanılacak olan parametredir. | - | - | - | Hayır |
+| MailServer.Profiles.EBA.UseOAuth | MailServerda OAuth kullanılıp kullanılmayacağını belirten parametredir. | False | True | False | Hayır |
+| Messages.DefaultWorkflowMessageSubject | Gönderilen süreç maillerinin konusunun varsayılan olarak nasıl olacağını belirtir. Değer olarak {Form.Id},{Form.GlobalId} yada {Form.Caption} değerleri de verilebilir. Sadece bu değerler kullanılmak zorunda değildir istenilen herşey yazdırılabilir örneğin "eBA Sistemi Örnek Projesi Süreç No: {Process.Id}" gibi. Bu değerler sadece süreç mailinin konusunun süreç ile ilgili değerler içermesini sağlar. | - | - | {Process.Caption} {Process.Id} | Hayır |
+| Messages.FillWorkflowUsersToSenderList | Sistemde süreç maili gönderilirken süreç geçmişindeki onaylar  üzerindeki tüm kullanıcıları To'ya ve bilgilendirmeler üzerindeki tüm kullanıcıları CC'ye ekleyen parametredir. | False | True | False | Hayır |
+| Messages.FromMode | Sistemde gönderilen maillerin system'in varsayılan mail adresiyle mi gönderileceğini yoksa işlemi gerçekleştiren kullanıcının e-posta adresiyle mi gönderileceğini belirten parametredir. | system | sender | system | Hayır |
+| MobileSignature.***.APID | *** Alana Operatör adı gelmelidir. Mobil imza APID bilgisini belirten parametredir.  Mobil veri paketi veya PDF oluşturmak için kullanılır. | - | - | - | Hayır |
+| MobileSignature.***.DNSName | *** Alana Operatör adı gelmelidir. Mobil imza DNS adını belirten parametredir.  Mobil veri paketi veya PDF oluşturmak için kullanılır. | - | - | - | Hayır |
+| MobileSignature.***.MSSPProfileQueryUrl | *** Alana Operatör adı gelmelidir. Mobil imza profil sorgusunun adresini belirten parametredir. Mobil veri paketi veya PDF oluşturmak için kullanılır. | - | - | - | Hayır |
+| MobileSignature.***.MSSPSignatureQueryUrl | *** Alana Operatör adı gelmelidir. Mobil imza sorgusunun adresini belirten parametredir. Mobil veri paketi veya PDF oluşturmak için kullanılır. | - | - | - | Hayır |
+| MobileSignature.***.Password | *** Alana Operatör adı gelmelidir. Mobil imza şifresini belirten parametredir.  Mobil veri paketi veya PDF oluşturmak için kullanılır. | - | - | - | Hayır |
+| MobileSignature.TurkcellGatewayAddress | Turkcell Operatörü için gateway adresini belirten parametredir. | - | - | http://localhost:3638 | Hayır |
+| MobileSignature.TurkTelekomGatewayAddress | Türk Telekom Operatörü için gateway adresini belirten parametredir. | - | - | http://mobile-gateway.bimser.net:3638 | Hayır |
+| MobileSignature.VodafoneGatewayAddress | Vodafone Operatörü için gateway adresini belirten parametredir. | - | - | http://mobile-gateway.bimser.net:3638 | Hayır |
+| Okta.ClientId | Okta entegrasyonundaki kimlik doğrulama için gerekli olan ClientId parametresidir. | - | - | - | Hayır |
+| Okta.ClientSecret | Okta entegrasyonu kimlik doğrulama için gerekli olan ClientSecret parametresidir. | - | - | - | Hayır |
+| Okta.LoginAddress | Okta'nın login adresini belirten parametredir. | - | - | /oauth2/default | Hayır |
+| Okta.OktaDomain | Okta'nın base domain adresini belirten parametredir. | - | - | - | Hayır |
+| Okta.RedirectUrl | Okta işlemlerinden sonra hangi URL'e yönlendirileceğini belirten parametredir. | - | - | - | Hayır |
+| Okta.SsoEnable | Okta içinde SSO'yu aktifleştirip/pasifleştiren parametredir. | False | True | False | Hayır |
+| Okta.TokenAddress | Okta'nın token adresini belirten parametredir. Access Token alabilmek için kullanılır. | - | - | /oauth2/default/v1/token | Hayır |
+| Okta.ValidateAddress | Okta'nın doğrulama adresini belirten parametredir. Login Token alabilmek için kullanılır. | - | - | /oauth2/default/v1/introspect | Hayır |
+| RecordsManagement.DeletePermissionForAdmin | Belge yönetiminde Ribbon barda silme butonunun görünürlüğünü açıp/kapatan parametredir. Bu parametrenin çalışması için silme işlemi yapacak hesabın webDocumentManagementAdmin yetkisine sahip olması gereklidir. | False | True | False | Hayır |
+| RestApi.Address | eBA Mobil uygulamasının erişim sağlayacağı RestAPI adresidir. | - | - | - | Hayır |
+| RestApi.MobileUrl | eBA Mobil uygulamasının erişim sağlayacağı eBA adresidir. | - | - | - | Hayır |
+| RecordsManagement.ControlledTerminology.***.???.Connection | *** Alana grup adı, ??? alana da key bilgisi gelmelidir. Belge Yönetimi Kontrollü terminoloji için connection bilgisini belirten parametredir. | - | - | - | Hayır |
+| RecordsManagement.ControlledTerminology.***.???.Description | *** Alana grup adı, ??? alana da key bilgisi gelmelidir. Kontrollü terminoloji item açıklamasının bilgisini içeren parametredir. | - | - | - | Hayır |
+| RecordsManagement.ControlledTerminology.***.???.Query | *** Alana grup adı, ??? alana da key bilgisi gelmelidir. Kontrollü terminoloji query bilgisini içeren parametredir. | - | - | - | Hayır |
+| RecordsManagement.ControlledTerminology.***.???.Type | *** Alana grup adı, ??? alana da key bilgisi gelmelidir. Kontrollü terminoloji query tipini belirtir. Date - Query | Date | Query | - | Hayır |
+| RecordsManagement.ControlledTerminology.***.Description | *** Alana key bilgisi gelmelidir. Kontrollü terminoloji açıklamasını belirten parametredir. | - | - | - | Hayır |
+| RecordsManagement.Retention.Destroy.ReportFolder | Belge Yönetimi retention imha klasörünün path bilgisini içeren parametredir. | - | - | Retention Reports | Hayır |
+| RecordsManagement.Retention.Transfer.ReportFolder | Belge Yönetimi retention transfer klasörünün DM path bilgisini içeren parametredir. | - | - | Retention Reports | Hayır |
+| RecordsManagement.Retention.Transfer.TransferFolder | Belge Yönetimi retention transfer yapılacak klasörün path bilgisini içeren parametredir. | - | - | c:\Transfers | Hayır |
+| ScheduleServer.Tasks | Configuration Manager üzerindeki Scheduled Tasks sekmesi altında bulunan Jobların bulunduğu XML içeriğini tutan parametredir. | - | - | - | Evet |
+| Security.AuthenticationMode | Sistemin kendi standart yetkilendirme modunun mu yoksa  özel bir yetkilendirme yapısının mı kullanılacağını belirten parametredir. | custom | standart | standart | Evet |
+| Security.AuthenticationType | LDAP, LDAPS, AdvancedDLL yada DLL gibi değerler alabilir. Security.AuthenticationMode custom seçildikten sonra hangi yapının kullanılacağı belirtilir. | - | - | LDAP | Evet |
+| Security.Domains.Multiple | Sistemde birden fazla LDAP bağlantısı ile AD yapısı kurulmasını aktifleştirip/pasifleştiren parametredir. | False | True | False | Evet |
+| Security.ExternalUserMatch | LDAP girişi için ExternalUserName özelliği mi yoksa OSUSERS tablosundaki ID alanı mı kullanacağını belirten parametredir. | notequal | equal | equal | Evet |
+| Security.LoginCookieKey | Kullanıcı çerezlerinin tutulduğu çerezin adını belirten parametredir. Setupta eBAUserCookie olarak gelmektedir. | - | - | - | Evet |
+| Security.LoginMode | Sisteme hangi kimlik doğrulama yapısı ile giriş yapılacağını belirten parametredir. Internal yalnızca DB'deki OSUSERS tablosuna bakarak, external yalnızca AD entegrasyonuna bakarak, mixed ise her ikisine de bakarak çalışmaktadır. | external | mixed | internal | Evet |
+| Security.PasswordEncryption | Sistemdeki tüm kullanıcı şifrelerinin hashlenmesini sağlayan parametredir. | False | True | False | Evet |
+| Security.PasswordManagement.ForgottenPasswordEnable | Login ekranındaki şifremi unuttum butonunu görünür hale getiren parametredir. | False | True | False | Evet |
+| Security.PasswordManagement.PasswordExpire.Days | Security.PasswordManagement.PasswordExpire.Enable Parametresi aktifse şifrenin ne kadar süre geçerli olacağını belirten parametredir. | False | - | - | Evet |
+| Security.PasswordManagement.PasswordExpire.Enable | Sistemde belli aralıklarka şifre değiştirmeyi zorunlu kılan parametredir. | False | True | False | Evet |
+| Security.PasswordManagement.PasswordExpire.RemindBefore | Security.PasswordManagement.PasswordExpire.Enable Parametresi aktifse Security.PasswordManagement.PasswordExpire.Enable parametresinden kaç gün önceden şifre değiştirmesi gerektiğini hatırlatsın bilgisini tutan parametredir. | False | - | - | Evet |
+| Security.PasswordManagement.Strongness.Constraints.Length | Şifre değiştirilirken şifrenin uzunluğunun en az olması gereken değeri belirtir. | 1 | - | True | Evet |
+| Security.PasswordManagement.Strongness.Constraints.LowerCaseLetters | Şifre değiştirilirken şifrenin içerisindeki küçük karakterlerin en az kaç tane olması gerektiğini belirtir. | False | - | False | Evet |
+| Security.PasswordManagement.Strongness.Constraints.NonAlphaNumerics | Şifre değiştirilirken şifrenin içerisindeki harf karakterlerin en az kaç tane olması gerektiğini belirtir. | False | - | False | Evet |
+| Security.PasswordManagement.Strongness.Constraints.NumericCharacters | Şifre değiştirilirken şifrenin içerisindeki sayısal karakterlerin en az kaç tane olması gerektiğini belirtir. | False | - | True | Evet |
+| Security.PasswordManagement.Strongness.Constraints.UpperCaseLetters | Şifre değiştirilirken şifrenin içerisindeki büyük karakterlerin en az kaç tane olması gerektiğini belirtir. | False | - | True | Evet |
+| Security.PasswordManagement.Strongness.Enable | Şifre değiştirilirken belli kısıtlamaların aktif edilmesini sağlayan parametredir. | False | True | False | Evet |
+| Security.AcceptedExternalUserProperties | Sistemin kullanıcının hangi özellik üzerinden LDAP kontrolü yapacağını belirten parametredir. Varsayılan ExternalUserName'dir. | - | - | - | Hayır |
+| Security.AccessControlAllowOriginDomain | Access-Control-Allow-Origin Header'ına bu parametrede verilen değerler eklenerek CORS yapılandırması tamamlanır. | - | - | * | Hayır |
+| Security.AllowChangePassword | Bu parametre aktif haldeyken sistemde şifre değiştirme işlemi yapılabilir. Aksi durumda web arayüzündeki şifre değiştirme kısmı gözükmez. | False | True | False | Hayır |
+| Security.AllowedHosts | Sistemde izin verilen hostları belirten parametredir. | - | - | Web.Url | Hayır |
+| Security.AllowedIPRanges.***.EndAddress | *** Alanı Range'in adını belirtmektedir. Security.AllowedIPRanges.Enable Parametresi aktif hale getirildiğinde IP aralığının sonunu belirten parametredir. | - | - | - | Hayır |
+| Security.AllowedIPRanges.***.StartAddress | *** Alanı Range'in adını belirtmektedir. Security.AllowedIPRanges.Enable Parametresi aktif hale getirildiğinde IP aralığının başlangıcını belirten parametredir. | - | - | - | Hayır |
+| Security.AllowedIPRanges.Enable | Sistemde sadece belli IP aralıklarına izin veren parametredir. Bu parametre açıkken aralık içerisinde olmayan bir IP adresine izin vermesi için kullanıcıya webLoginWAN yetkisi tanımlanmalıdır. | False | True | False | Hayır |
+| Security.AuthenticationDLL.Path | Security.AuthenticationType Parametresi DLL yada AdvancedDLL seçildiğinde hangi DLL'in kullanılacağını belirten parametredir. | - | - | - | Hayır |
+| Security.AuthenticationDLL.TypeName | Security.AuthenticationType Parametresi DLL yada AdvancedDLL seçildiğinde ve Security.AuthenticationDLL.Path parametresinde hangi DLL'in kullanılacağı belirtildikten sonra bu DLL'lerin içerisindeki hangi sınıfın kullanılacağını belirttiğimiz parametredir. | - | - | - | Hayır |
+| Security.CaptchaCount | Çalışması için Security.EnableCaptcha parametresinin aktif olması gereklidir. Login ekranında kaç kez yanlış deneme yapıldığında captcha kontrolünün çıkacağını belirten parametredir. | False | 10 | 3 | Hayır |
+| Security.CustomAuth20.***.AssemblyPath | *** Alan Custom Authentication'ın adını belirtir.  Bu parametre Custom Authentication için kullanıcılacak olan DLL'in konumunu belirtir. | - | - | - | Hayır |
+| Security.CustomAuth20.***.AssemblyType | *** Alan Custom Authentication'ın adını belirtir. Bu parametre Custom Authentication için kullanılan Security.CustomAuth20.***.AssemblyPath parametresindeki DLL'in içinde kullanılacak olan sınıfı belirten parametredir. | - | - | - | Hayır |
+| Security.CustomAuth20.***.Caption | *** Alan Custom Authentication'ın adını belirtir. Bu parametre Custom Authentication'ın başlığını/görünür adını belirtir. | - | - | - | Hayır |
+| Security.CustomMFA.MFADllPath | MFA yapısı için kullanılacak olan DLL'in konumunu belirten parametredir. | Common/eBACustomAuthentication.dll | - | - | Hayır |
+| Security.CustomMFA.MFAMode | MFA yapısı için Google'ın mı yoksa başka bir yapının mı kullanılacağını belirten parametredir. | Google | Custom | - | Hayır |
+| Security.CustomMFA.MFATypeName | MFA yapısı için belirtilen DLL'in içinde bulunan type'ın adını belirtir. | eBACustomAuthentication.MFACustom | - | - | Hayır |
+| Security.CustomMFA.TwoFactorAuthenticationTitle | MFA Yapısı için kullanılacak olan yetkilendirme başlığını belirten parametredir. | - | - | - | Hayır |
+| Security.Debug | Kimlik doğrulama işlemleri sırasında hata ayıklamayı açıp/kapatan parametredir. | False | True | False | Hayır |
+| Security.Domains.***.AuthenticationType | *** Alana Domain adı verilir. Bu domain'e giriş yaparken herhangi bir kimlik doğrulama yapısı kullanıcaksa onu belirttiğimiz parametredir. Bu seçenekler None, Secure, Encryption, SecureSocketsLayer, ReadOnlyServer, Anonymous, FastBind, Signing, Sealing, Delegation, ServerBind'dır. | - | - | - | Hayır |
+| Security.Domains.***.Path | *** Alana Domain adı verilir. Bu parametre AD bağlantı bilgisinin tutulduğu parametredir. | - | - | - | Hayır |
+| Security.Domains.***.UseDomainInLogonName | *** Alana Domain adı verilir. Sisteme giriş yaparken domain/username şeklinde giriş yapmamızı sağlayan parametredir. | False | True | False | Hayır |
+| Security.Domains.Default | Eklenen LDAP domainlerinden hangisinin varsayılan olarak kullanılacağını belirten parametredir. Sadece domainin adını tutmaktadır. | - | - | - | Hayır |
+| Security.EnableCaptcha | Login ekranında şifre Security.CaptchaCount parametresindeki sayı kadar yanlış girildiğinde captcha kontrolünü getiren parametredir. | False | True | True | Hayır |
+| Security.EncryptCookies | Çerezlerin tarayıcı üzerinde kriptolanmış bir şekilde tutulmasını sağlayan parametredir. | False | True | True | Hayır |
+| Security.LoginLockout.LockoutEnable | Şifre Security.LoginLockout.MaxLoginRetries parametresindeki değer kadar yanlış girildikten sonra hesabın kilitlenmesini sağlayan parametredir. Bu parametre aktif hale getirildiğinde kilitlenen hesapları açmak için Organizasyon Yönetimi altında kilitli kullanıcı menüsü de eklenmektedir. | False | True | False | Hayır |
+| Security.LoginLockout.LockoutTimeout | Security.LoginLockout.LockoutEnable Parametresi aktif hale getirildiğinde bu parametrede ki süre kadar kullanıcın hesabının kilitli kalmasını sağlayan parametredir. Dakika cinsinden belirtilmelidir. | 1 | - | 5 | Hayır |
+| Security.LoginLockout.MaxLoginRetries | Security.LoginLockout.LockoutEnable Parametresi aktif hale getirildiğinde bu parametrede ki değer kadar yanlış giriş yapması durumunda kullanıcının hesabının kilitlenmesini sağlayan parametredir. | - | - | 3 | Hayır |
+| Security.LoginLockout.NotifyFailLoginAfterFailureCount | Security.LoginLockout.LockoutEnable Parametresi aktif hale getirildiğinde kaç başarısız deneme de uyarı göstereceğinin sayısını belirten parametredir. | False | - | False | Hayır |
+| Security.LoginLockout.NotifySuccessLoginAfterFailureCount | Security.LoginLockout.LockoutEnable Parametresi aktif hale getirildiğinde kullanıcı kaçıncı denemeden sonra giriş yaptıysa giriş başarılı uyarısı göstereceğinin sayısını belirten parametredir. | False | - | False | Hayır |
+| Security.LogoutOldSessionDirectly | Eğer tarayıcı üzerinde eski bir Authentication Session'ı varsa ve bu parametre true olarak belirtilmişse başka bir hesaba giriş yapılmak istendiği anda direkt olarak eski session'ı yok eden parametredir. | False | True | False | Hayır |
+| Security.NotifyUserOldSessionStillActive | Tarayıcı üzerinden yeni bir hesaba girmek istediğinizde eğer eski bir session varsa bununla ilgili bilgilendirme yapılmasını sağlayan parametredir. | False | True | False | Hayır |
+| Security.PasswordManagement.ChangePasswordHistoryCount | Şifre değiştirilirken önceki kaç şifre ile aynı olmaması kontrol edilecekse bunun değerini belirten parametredir. | False | 5 | False | Hayır |
+| Security.PasswordManagement.PasswordResetUserProperties | Bu parametre içerisine kullanıcılar üzerinde kullanılan özellikler "," ile ayrılarak girilir ve şifre değiştirme işlemi sonrası bu özelliklerin resetlenmesi sağlanır. | - | - | - | Hayır |
+| Security.QueryStringEncryptionKey | Sistemdeki QueryString değerlerini şifreyelebilmek için kullanılan özel bir şifredir. Her sistemde güvenlik amaçlı özelleştirilebilir. | - | - | Gizlilik neticesinde belirtilemiyor | Hayır |
+| Security.RateLimit.MaxRequestCount | Sistemde RateLimit ile işaretlenen endpointlerin alabileceği maksimum istek sayısını belirten parametredir. | - | - | 10 | Hayır |
+| Security.RateLimit.Seconds | Sistemde RateLimit ile işaretlenen endpointlerin timeout süresini belirten parametredir. | - | - | 30 | Hayır |
+| Security.ShareLinkExternalLoginUser | LDAP Bağlantısı yapıldıktan sonra link paylaşımı yapılırken linkin hangi kullanıcı üzerinden paylaşılacağını belirten parametredir. | - | - | Server.Connection.User | Hayır |
+| Security.WebLoginLogEnable | Web arayüzündeki login işlemlerinin loglarının tutulmasını sağlayan parametredir. | False | True | False | Hayır |
+| Server.Connection.CommandTimeout | Yapılan uzun bir işlemin timeout sayılabilmesi için kaç saniye sürmesi gerektiğini belirten parametredir. | False | - | 30 | Hayır |
+| Server.PasswordEncryption | Server.Connection.Password parametresinin kripte olup olmadığını belirten parametredir. | False | True | False | Hayır |
+| Server.TimerRequestsPerSession | Worfklow Schedulelarının tek istekte ne kadar akışı tetikleyebileceğini sınırlandırdığımız parametre. | - | - | 5 | Hayır |
+| Security.CaptchaCase | Captcha gösteriminde harflerin upper mı yoksa lower mı olacağını belirten parametredir, boş bırakılınca karışık getirir. | lower | upper | - | Hayır |
+| Statistics.Enabled | Bu parametre aktif edildiğinde hangi metodda ne kadar süre harcanıyor, istek sayısı, ortalama performansı gibi bilgiler STATREQUESTS tablosuna yazılır. | False | True | False | Hayır |
+| Statistics.ShowRequestMachineName | Yapılan işlem sonucunda makine adının responseda dönmesini sağlayan parametredir. | False | True | False | Hayır |
+| Statistics.StatRequestDetailsEnabled | Bu parametre aktif edildiğinde hangi metodda ne kadar süre harcanmış, kim kullanmış,ne zaman kullanmış gibi bilgiler STATREQUESTDETAILS tablosuna yazılır. | False | True | False | Hayır |
+| Statistics.StatRequestMinDuration | İşlem yapan metod ne kadar süreden fazla veya eşit sürerse Statistics.StatRequestDetailsEnabled parametresi aktif edildiğinde STATREQUESTDETAILS tablosuna kayıt atacağını belirtir. | - | - | 100 | Hayır |
+| Version | eBA'nın Majör ve Minör versiyon bilgisini tutar. | - | - | 6.7 | Evet |
+| Versions.Compiler | eBA'nın derleyicisinin versiyonunu belirtir. | - | - | 8.1.0 | Evet |
+| Versions.SystemManager | System Manager versiyonunu belirtir. | - | - | 4.1.0 | Evet |
+| Versions.WorkflowServer | Workflow sunucusunun versiyonunu belirtir. | - | - | 4.1.0 | Evet |
+| Versions.WorkflowStudio | Workflow studio'nun versiyonunu belirtir. | - | - | 5.2.0 | Evet |
+| Web.ButtonDirection | Top, Bottom veya Both değerleri verilebilir. Event butonların konumunu belirtir. | - | - | Bottom | Evet |
+| Web.ExceptionHandling.SupportEmail | Exception Handling sırasında hatanın gönderileceği mail adresidir. | - | - | - | Evet |
+| Web.HideFilenamesForExtensions | Belirtilen uzantılara sahip dosyaları gizler. Birden çok uzantı belirtilebilir bunlar "," ile ayrılmalıdır. | - | - | wfd | Evet |
+| Web.InboxOutboxSort | Bazı gridlerde (Approvals, Archives vs.) gelen datanın nasıl sıralanacağını belirtir. | ascending | descending | descending | Evet |
+| Web.SingleSignOn.Debug | SSO loglarının Log Viewer'a yazılıp yazılmayacağını belirten parametre. | False | True | False | Evet |
+| Web.SingleSignOn.Enable | Sistemde SSO özelliğini aktif/pasif hale getirir. | False | True | False | Evet |
+| Web.SingleSignOn.QueryStringEncryption | QueryString parametrelerini kripte ederek işlenmesini sağlar. | False | True | False | Evet |
+| Web.SingleSignOn.Types | SSO tiplerini tutan parametredir. Virgülle ayrılarak girilmelidir. | - | - | - | Evet |
+| Workflow.Rollback.Enable | İlerletilen süreçlerin bir önceki adıma/adımlara geri getirilmesi özelliğini açar/kapatır. | False | True | True | Evet |
+| Workflow.Rollback.PeriodForFinishedWorkflows | Rollback özelliğinin, sürecin üzerinden maximum kaç gün geçtikten sonra geri kullanamayacağını belirtir. | 1 | - | False | Evet |
+| WorkParams.DailyWorkingHours | Sistemde kullanılmak üzere şirketin günlük toplam çalışma saatini belirtir. Tam sayı olarak girilmelidir. | False | - | 9 | Evet |
+| WorkParams.WorkDays.*** | Sistemde kullanılmak üzere şirketin haftanın hangi günlerinde çalıştığını belirtir. *** Alana Sunday,Monday gibi gün isimleri girilir. Çalışma olmayan günün value değeri nowork olarak belirtilir. | - | - | nowork | Evet |
+| WorkParams.WorkHours.Default.LunchEnd | Şirketin günlük hangi saatte öğle yemeğini bitireceğini belirtir. | 00:00:00 | 00:00:00 | 13:00:00 | Evet |
+| WorkParams.WorkHours.Default.LunchStart | Şirketin günlük hangi saatte öğle yemeğine başlayacağını belirtir. | 00:00:00 | 00:00:00 | 12:30:00 | Evet |
+| WorkParams.WorkHours.Default.WorkEnd | Şirketin günlük hangi saatte mesai sonu yaptığını belirtir. | 00:00:00 | 00:00:00 | 18:00:00 | Evet |
+| WorkParams.WorkHours.Default.WorkStart | Şirketin günlük hangi saatte iş başı yaptığını belirtir. | 00:00:00 | 00:00:00 | 08:30:00 | Evet |
+| Web.ApplicationCaptions.*** | Login ekranında logonun altında çıkan yazıyı değiştirmemizi sağlar. Sondaki *** olan alana dil parametresi eklenerek her dilde farklı şeyler yazılması sağlanabilir. Örneğin Web.ApplicationCaptions.Turkish gibi. | - | - | - | Hayır |
+| Web.ApplicationInsightEnable | Application Insights'ı aktif etmek için kullanılır. | False | True | False | Hayır |
+| Web.ApplicationInsightKey | Application Insights'ı aktif ettikten sonra kullanmak için gereken key. | - | - | - | Hayır |
+| Web.AutoApprovalNavigation | Bir süreci onayladıktan sonra başka bir süreç varsa direkt onun açılmasını sağlar. | False | True | False | Hayır |
+| Web.AutoStartSigningIfPossible | Süreç ilerletilirken bir imza aşaması varsa ve bu parametre aktif ise direkt olarak imza aşamasına geçer. Ayrıca bu parametre aktif olan imza türüne (Digital/Mobile) göre işlem yapar. | False | True | False | Hayır |
+| Web.BrowserDetectEnable | Tarayıcının ve tarayıcı versiyonunun tespit edilerek gerektiğinde eBA için gereken versiyon yükseltmesinin yapılmasını gösteren sayfaya yönlendirir. | False | True | True | Hayır |
+| Web.CanChangeDocumentNotOwned | Görüntülenen dokümanın sahibi olmayan kişinin dokümanı değiştirebilmesini engeller. | False | True | True | Hayır |
+| Web.CountQueryCacheExpireTime | Saniye cinsinden CountQuery yapısının cache süresini belirtir. | - | - | 15 | Hayır |
+| Web.CountQueryTime | Milisaniye cinsinden CountQuery yapısının hangi sürelerde/aralıklarda (interval) çalışacağını belirten parametredir. | - | - | 15000 | Hayır |
+| Web.Dashboard.ShowDelegationBox | Vekaletler penceresinin açılıp/açılmayacağını belirten kısımdır. | False | True | True | Hayır |
+| Web.Dashboard.UserCanAddProfile | Anasayfadaki startup ekranına yeni profile eklenip-eklenemeyeceğini belirtir. | False | True | True | Hayır |
+| Web.DataGridAllowedPageSizes | Tüm gridlerdeki sayfaların kaç satır data içereceğini belirten kısımdır. | - | - | 10, 15, 20, 25, 30 | Hayır |
+| Web.DisableHtmlEntriesOnForms | Tablo nesnesine HTML veri girişi yapılmasını engeller. | False | True | True | Hayır |
+| Web.DSClientCanRememberPassword | Dijital İmza şifresinin hatırlanıp/hatırlanmayacağını belirtir. | False | True | False | Hayır |
+| Web.ExceptionHandling.LoggingEnable | Hata alındığında otomatik olarak loglama özelliğini aktifleştirir/pasifleştirir. | False | True | True | Hayır |
+| Web.ExceptionHandling.SendErrorMailDirectly | Hata alındığında otomatik olarak mail gönderimini aktifleştirir/pasifleştirir. | False | True | False | Hayır |
+| Web.ExceptionHandling.ShowErrorDetail | Exception Handling sırasında hatanın tüm detayları ile birlikte iletilmesini sağlar. | False | True | False | Hayır |
+| Web.ExceptionHandling.ShowErrorMessage | Hata alındığında hata mesajını gösterip/göstermeyecek parametredir. | False | True | True | Hayır |
+| Web.ExceptionHandling.StartProcessByError | Hata alındığında başlatılması istenen bir süreç varsa onun adını belirtir. | - | - | - | Hayır |
+| Web.FormDataLoggingEnable | Form aksiyonlarının ve datasının loglanmasını sağlar. | False | True | False | Hayır |
+| Web.GridSettingsCanChange | Tablo ayarlarının değiştirilmesine izin verir. | False | True | True | Hayır |
+| Web.IntegrationQueryTopCount | Gridler üzerinde ki dataların maximum kaç satır olacağını belirtir. | - | - | 5000 | Hayır |
+| Web.JavaScriptCookies | Çerezleri aktifleştirilip kullanılmasını sağlar. | False | True | True | Hayır |
+| Web.LoginUrl | Giriş sayfasının adresini belirtir. | - | - | Login.aspx | Hayır |
+| Web.LogoffURL | Oturum kapatıldıktan sonra hangi URL'e yönlendirileceğini belirtir. | - | - | - | Hayır |
+| Web.MailRequestsGotoStartupLink | Gönderilen mail içeriğinde startup sayfasının linkinin olacağını/olmayacağını belirtir. | False | True | True | Hayır |
+| Web.MaxFileDownloadSize | Maximum indirilebilecek dosya boyutunu MB cinsinden belirtir. | - | 4096 | 512 | Hayır |
+| Web.MaximumAttachmentSize | GB Cinsinden verilir, doküman yönetimine yüklenebilecek dosya boyutunu belirtir. | 1 | - | 4 | Hayır |
+| Web.MessengerShowGroups | eBA Messenger widget'ında kullanıcı listelerinde grupları listeleyip/listelemeyeceğimizi belirtir. | False | False | True | Hayır |
+| Web.MessengerShowOffline | eBA Messenger widget'ında kullanıcı listelerinde offline olanları gizleyip/gizlemememizi sağlar. | False | True | True | Hayır |
+| Web.Modals.Users.Columns | Kullanıcı detaylarının getirildiği ekranlarda hangi kolonların getirileceğinin belirtildiği parametredir.Virgülle ayrılarak girilmelidir. | - | ID,FIRSTNAME,LASTNAME,EMAIL,PROFESSIONNAME,DEPARTMENTNAME | FIRSTNAME,LASTNAME | Hayır |
+| Web.OpenFormAfterApprove | Onaydan sonra event form açılmasını sağlar. | False | True | False | Hayır |
+| Web.PersonelSettingCanChange | Kişisel ayarlar (Tema rengi)'nin değiştirilmesine izin verir. | False | True | True | Hayır |
+| Web.PlaySoundNotification | Kullanıcının gelen bildirimlerde sesli bildirim almasını sağlar. Bu ayarın çalışması için webde diğer ayarlar'ın altından sesli uyarı çal seçeneği işaretlenmelidir.  | False | True | True | Hayır |
+| Web.QueryStringLoginAsAdminEnable | QueryStringLogin kullanılmasını açar/kapatır. | False | True | True | Hayır |
+| Web.RelatedDocumentsVisible | DocumentViewer'da ilişkili dokümanlar tab'ının görünüp görünmeyeceğini belirtir. | False | True | True | Hayır |
+| Web.RequireLoginBeforeRedirectingToStartupPage | Bu parametre yoksa yada true olarak verilmişse startup ekranına login olmadan giriş yapılmasına izin vermez. | False | True | True | Hayır |
+| Web.RootUrl | eBA'nın root adresini belirtir. | - | - | http://localhost | Hayır |
+| Web.ShowAllCompaniesUsersOnModal | eBAWSAPI servisleri ve kullanıcı bilgilerinin dönüldüğü ekranda şirket bilgilerinin gözüküp/gözükmeyeceğini belirtir. HumanResources.MultiCompany parametresi ile birlikte kullanılır.HumanResources.MultiCompany true, bu parametre ise false olmalıdır. | False | True | False | Hayır |
+| Web.ShowDocumentEditModeConfirmation | Doküman edit moddayken başka bir yere tıklandıysa uyarı vermesi için kullanılır, sadece Desktop için kullanılabilir. | False | True | True | Hayır |
+| Web.ShowHelpButton | Sağ üst köşedeki yardım sayfasına giden yardım ikonunu kaldırır. | False | True | True | Hayır |
+| Web.ShowNotes | DocumentViewer'da RibbonBar'da bulunan Notlar butonunun görünürlüğünü açar/kapatır. | False | True | True | Hayır |
+| Web.ShowRememberMe | eBAWSAPI servislerinde ve Mobil-Desktop login ekranlarında beni hatırla butonunun gözüküp gözükmeyeceğini belirtir. | False | True | True | Hayır |
+| Web.ThemeColor | Tema rengini belirtir. | - | - | rgb(0,153,102) | Hayır |
+| Web.Url | Sistemin default host adresini belirtir. | - | - | - | Hayır |
+| Web.UsersQuery.Default | Web.UsersQuery.* isimli diğer parametreler boş ise kullanılacak olan varsayılan sorgudur.ConnectionName.QueryName şeklinde değer verilmelidir. | - | - | - | Hayır |
+| Web.UsersQuery.DelegationUsersQuery | Kullanıcıların vekalet işlemleri için kulladığı sorgudur. | - | - | - | Hayır |
+| Web.UsersQuery.LoginAsUsersQuery | Kullanıcıların LoginAs yaparken sistemin kullanacağı sorguyu belirlediği kısımdır. ConnectionName.QueryName şeklinde değer verilmelidir. | - | - | - | Hayır |
+| Web.UsersQuery.MessageUsersQuery | Kullanıcıların mesajları görüntülemek için kullandığı sorgudur . ConnectionName.QueryName şeklinde değer verilmelidir. | - | - | - | Hayır |
+| WebRevisionNumber | Web revizyon sayısını belirten parametredir. Genelde sistemde Version ve ServicePack parametreleri birleştirilip onların sonuna eklenerek kullanılır. | - | - | - | Hayır |
+| Workflow.DisableFlowCaching | Süreçler üzerinde ki Cache özelliğini açar/kapatır. | False | True | False | Hayır |
+| Workflow.HistoryRequestDateSort | Akış tarihçesinin azalan/artan formatta getirilmesini sağlar. | descending | ascending | descending | Hayır |
+| Workflow.IgnoreInvalidUsersInGroups | Workflow Studio'da ki Pozisyon Grubu nesnesine uygun olmayan kullanıcı eklendiğinde hata vermesini yada hata vermeden geçmesini sağlar. | False | True | False | Hayır |
+| WorkParams.WorkHours.***.LunchEnd | Örneğin şirket Cumartesi günleri yarım gün çalışıyorsa ve Cumartesi günü kaçta öğle molası bitiyorsa bu parametre ile belirtilir. *** Alanına WorkParams.WorkDays.*** parametresindeki *** alandaki değer verilir. | 00:00:00 | 00:00:00 | - | Hayır |
+| WorkParams.WorkHours.***.LunchStart | Örneğin şirket Cumartesi günleri yarım gün çalışıyorsa ve Cumartesi günü kaçta öğle molası başlıyorsa bu parametre ile belirtilir. *** Alanına WorkParams.WorkDays.*** parametresindeki *** alandaki değer verilir. | 00:00:00 | 00:00:00 | - | Hayır |
+| WorkParams.WorkHours.***.WorkEnd | Örneğin şirket Cumartesi günleri yarım gün çalışıyorsa ve Cumartesi günü kaçta mesai sonlanıyorsa bu parametre ile belirtilir. *** Alanına WorkParams.WorkDays.*** parametresindeki *** alandaki değer verilir. | 00:00:00 | 00:00:00 | - | Hayır |
+| WorkParams.WorkHours.***.WorkStart | Örneğin şirket Cumartesi günleri yarım gün çalışıyorsa ve Cumartesi günü kaçta mesai başlıyorsa bu parametre ile belirtilir. *** Alanına WorkParams.WorkDays.*** parametresindeki *** alandaki değer verilir. | 00:00:00 | 00:00:00 | - | Hayır |

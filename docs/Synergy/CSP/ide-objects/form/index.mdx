@@ -1,0 +1,153 @@
+---
+title: Form
+description: Form
+keywords:
+  - CSP
+  - docs
+  - ide
+slug: index
+---
+
+Form, projenin görsel arayüzünün tasarlandığı bileşendir. Form, geliştirme arayüzünde bulunan Form Tasarım Nesneleri kullanılarak dizayn edilir.
+
+Arayüz ekranındaki Çözüm Gezgini panelinde bulunan bir projenin formu, aktif ekran olarak açıldığında ve form üzerine tıklandığında, Özellik Görüntüleyici  panelinde formun sahip olduğu özellikler listelenecektir.
+
+![Form](https://docsbimser.blob.core.windows.net/imagecontainer/auto-uploadcb3396b8-f965-4d6e-b3d4-2fd674c0e265)
+
+Özellik Görüntüleyici panelinde Form için **“Genel”** ve **“Olaylar”** sekmeleri bulunmaktadır.
+
+## Genel
+
+Formun sahip olduğu özelliklerin görüntülendiği ve bu özelliklerin düzenlenebildiği alanlar içerir. Form özellikleri, özellik türüne göre alt başlıklar altında gruplanmıştır.
+
+### Appearance
+
+`Caption` - Formun başlık bilgisidir. Web arayüzde form isminin görüntülendiği alanlarda kullanıcıya bu başlık bilgisi gösterilir.
+
+`Background Color` -  Formun arka plan renginin ayarlandığı kısımdır. Varsayılan olarak form beyaz arka plan rengi ile gelir. İsteğe bağlı olarak formun arka plan rengi değiştirilebilir.
+
+`Background Image` - Bu alandan yüklenen resim, formun arka plan resmi olarak ayarlanabilir.
+
+`Padding` - Formun üst, alt, sağ ve sol kenarlarından bırakılacak boşlukların ayarlanabildiği alanlar içerir. Form tasarımı için geliştiricinin belirleyeceği kenar boşlukları değerleri bu alanlara girilerek tasarım düzenlenebilir.
+
+### Behavior
+
+`ReadOnly` - Alan aktif edildiğinde form üzerine eklenen bütün nesneler salt-okunur durumunda gösterilir, web ara yüzünde formdaki bütün nesne içeriklerinde değişiklik yapılmasını engellemektedir.
+
+> *Örneğin form üzerinde iki adet içerisinde değişiklik yapılabilen TextBox nesnesi bulunsun. Formdaki ReadOnly seçeneği aktif edildiğinde, özellik içindeki nesneleri de etkilemekte ve değişiklik yapılmasını engellemektedir.*
+
+`Form Type` - Formun tipinin belirtildiği alandır. Form tipi alanında listelenen değerlerle farklı amaçlar için kullanılmak üzere form tipleri belirlenir.
+
+- **Standart Form :** İş akış süreçlerinde kullanılan, form üzerine eklenen nesnelerin doldurulmak üzere akıştaki aksiyon adımlarına düşürüldüğü ve form alanları doldurularak üzerinde aksiyon alınan form tipleridir.
+- **Parametreli Form :** Parametre form, form üzerinde doldurulan verilerin kaydedilerek, başka formlarda ve form üzerindeki nesnelerde veri kaynağı olarak kullanıldığı formlardır. Doldurulan form herhangi bir aksiyon adımına gönderilmez, yalnızca girilen veriler kaydedilir.
+> *Örneğin; Parametrik tipte bir form hazırlanıp, form üzerine bir tablo nesnesi yerleştirilerek, şirketin anlaşmalı olduğu kargo şirketleri bu tablo nesnesine satır satır girilip kaydedilir. Gelen evrak sürecinde standart form üzerindeki “Evrağı getiren kargo şirketi” seçim alanının kaynak verisi olarak bu parametrik form gösterilir ve parametrik forma eklenen veriler, bu seçim alanında listelenebilir.*
+- **Görünüm Formu :** Görünüm formu, arşiv formu tasarlamak için kullanılan form tipidir. Veri tabanında kayıt oluşturmaz, yalnızca veri gösterimi içindir.
+- **Onay Listesi Formu :** Onay listesi özelleştirilmek istenirse form tasarlamak için kullanılır. Eğer onay listesi formu oluşturulmuşsa, onaylara girildiğinde tasarlanan form açılır.
+
+`Statuses` - Formun durumlarının listelendiği alandır. Akışın belirli aşamalarında belge durumunu değiştirmek için bu değerler kullanılır. Akış tasarım nesnelerinden biri olan **“Belge Durumu”** nesnesi, akış adımlarına konumlandırılarak içeriğinden, bu alanda tanımlanmış durumlardan biri seçildiğinde, dokümanın durumu set edilen durum bilgisi olarak güncellenmiş olur.
+
+Formda statik olarak tanımlanmış; **Varsayılan**, **Onay**, **Red**, **İptal**, **Zaman Aşımı**, **Geçersiz**, **Taslak** ve **Oluşturma** şeklinde 8 adet durum bilgisi mevcuttur. Durum alanına tıklanarak mevcut bir durum silinebilir veya yeni bir durum bilgisi eklenebilir.
+
+<div style={{textAlign: 'center'}}>
+
+![Form](https://docsbimser.blob.core.windows.net/imagecontainer/auto-uploadf6f9437e-97c8-42e2-8ac7-cb53938b1160)
+
+</div>
+
+`Public Fields` - Web arayüzünde, oluşturulan bir formun, **Form Başlığı**, **Doküman No**, **Durum**, **Oluşturan**, **Oluşturma Tarihi**, **Durum No** ve **Genel No** bilgilerinin kullanıcılara gösterilip gösterilmeyeceğinin ayarlandığı alandır.
+
+<div style={{textAlign: 'center'}}>
+
+![Form](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload8c4e60db-ebd3-44e5-bc63-2c7ed9417e2d)
+
+</div>
+
+`Identity Format` - Sistemde yaratılan her forma sistem tarafından verilen benzersiz bir “Form Id” değeri mevcuttur. Bu değer artan sayı şeklinde sistemdeki en büyük formid değerinin bir fazlası olarak yeni oluşan forma verilir.
+
+Kullanıcılar için daha anlamlı olan, özel formatlı form id ler oluşturma ihtiyacı doğabilir. Örneğin form id si olarak; tarih bazlı veya form kullanımı bazlı (örn; Sözleşme Formu için form numaraları “SOZ-” ile başlayacak) belirtici kelimeler eklenmek istenebilir. Bu gibi durumlarda, form id formatı “Kimlik Formatı” alanından belirlenebilir.
+
+Forma yerleştirilen “DocumentMetadata” nesnesi özelliklerinde **“Select Metadata Type”** alanında Id değeri seçildiğinde forma verilen formatlı id değeri form üzerinde gösterilebilmiş olur.
+
+:::caution DİKKAT
+
+Identity Format alanında yapılan tanımlamanın ilgili formda atanması isteniyorsa, DocumentMetadata nesnesinde Pull Number On Start veya Pull New Number özelliklerinden bir tanesi aktif edilip kullanılarak ya da akışta Doküman No Atama nesnesinde gerekli tanımlamalar yapılarak kullanılmalıdır. Bu işlemler yapılmadıysa form üzerinde verilen kimlik numarası gözükmeyecektir.
+
+:::
+
+<div style={{textAlign: 'center'}}>
+
+![Form](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload4d23478f-fe84-4965-8962-28208de299fd)
+
+</div>
+
+**“Choose a templates here”** seçeneği ile arayüz tarafından sunulan hazır kimlik formatları arasından seçim yapılabilir. **“Define new one and use”** seçeneği ile forma yeni kimlik formatları tanımlanabilir. Name alanında kimlik için verilmek istenen adlandırılma girilirken, Format alanında kimlik bilgisini tanımlanması için liquid değişken bilgileri girilmelidir. Kullanılabilecek değişkenler şunlardır;
+
+- Yıl{%year%}
+- Ay {%month%}
+- Gün {%day%}
+- Saat {%hour%}
+- Dakika {%minute%}
+- Saniye {%second%}
+- Özel {%date yyyy-MM-dd hh:mm:ss.fff%}
+- Sayaç {{c}}
+
+> *Örnek*
+>
+> {%year%}-{%month%}-{{ccc}} = 2019-12-001
+>
+> {%year%}-{%month%}-ABC{{c}} = 2019-12-ABC1
+
+:::info BİLGİ
+
+Örneğin; Biçim olarak, **{%year%}-{%month%}-{{ccc}}** formatı verildiğinde, form numaraları; “2019-12-001”, “2019-12-002”, “2019-12-003”, “2020-01-004”, “2020-01-005”, “2020-02-006”, “2020-02-007” yapısında oluşacaktır.
+
+**“Use template for counter grouping”** seçeneği işaretlenerek **“Grouping Template”** alanına **{%year%}-{%month%}** yazılırsa, form numaraları; “2019-12-001”, “2019-12-002”, “2019-12-003”, “2020-01-001”, “2020-01-002″, 2020-02-001”, “2020-02-002” şeklinde oluşturulur.
+
+:::
+
+Artan numaraların kaçtan başlayacağı **"Counter Start Value"** ve kaçar kaçar artacağı ise **"Counter Increment Value"** alanlarından belirlenebilir.
+
+`Toolbar Buttons` - Web arayüzünde açılan formun üzerine, form ile ilgili yapılmak istenen işlemleri gerçekleştirecek butonlar eklemek için kullanılan alandır.
+
+Bu alana eklenen buton kayıtlarına web arayüzünde tıklandığında, butonun benzersiz anahtar değeri, formun “Olaylar” sekmesinde bulunan **“onToolbarButtonClicked”** olayına parametre olarak gönderilir. Butona tıklandığında gerçekleşmesi istenen işlem, gelen buton parametre değeri kullanılarak, “onToolbarButtonClicked” olayında kodlanabilir.
+
+Eklenecek buton tipleri Kaydet, Yazdır ve Buton'dur. Kaydet butonu tipi eklendiğinde form çubuğu üzerinde formun kaydedilmesini sağlamak için buton gözükür. Yazdır butonu tipi eklenirse formun yazdırılmasını sağlamak için buton gözüküecektir. Buton tipi eklenerek formun “Olaylar” sekmesinde bulunan **“onToolbarButtonClicked”** olayına istenilen kod yazılarak yapacağı işlem kodlanabilir.
+
+- **Key :** Butonun anahtar bilgisinin girildiği alandır.
+- **Name :** Butonun isim bilsinin girildiği alandır.
+- **Caption :** Butonun form üzerinde gösterileceği başlık bilgisinin girildiği alandır, çoklu dil girişini desteklemektedir.
+- **Enabled :** Butonun aktif olup olmayacağının seçildiği alandır, form üzerinde gösterilmesi istenirse özellik aktif edilmelidir.
+- **Icon :** Buton için tanımlanmak istenen ikonun seçildiği alandır.
+- **Validate :** Alan aktif edilerek, Kural Yöneticisi içinde validasyon işlemleri yapılan kuralların çalışması sağlanır.
+
+`Variables` - 
+
+`Versioning Enabled` - Formun versiyonlanıp versiyonlanmayacağının belirlendiği alandır. Form versiyonlama aktifken veritabanında formun her versiyonuna ait ayrı kayıt oluşturulur. Böylece formda değişiklik yapıldığında önceki versiyonlara ait kayıtlar tutulmuş olur. Versiyonlama aktif değilken veritabanında forma ait kayıt, formun son güncel verilerini tutacaktır.
+
+`Can Save As Draft` - Formun taslak olarak kaydedilmesi istenildiğinde kullanılan alandır. Özellik aktif edildiğinde web ara yüzünde formda Taslak Olarak Kaydet Butonu gözükür. Butona tıklandığında form taslak olarak kaydedilir ve kaydeden kişinin İş Akış Yönetimi bölümünde Taslaklar bölümünden erişilebilir.
+
+:::danger UYARI
+
+Formdaki Can Save As Draft özelliği aktif edilerek form bir akış ile beraber kullanılırsa formda Taslak Olarak Kaydet butonu gösterilmemektedir. Akışı olan bir formda Taslak özelliği aktif edilmek istenirse **Akış Başlangıcı** nesnesindeki Can Save As Draft özelliği aktif edilmelidir.
+
+:::
+
+### Data Definition Language
+
+`Prefix` - Sistemin veri tabanında, form için oluşturulacak veri tabanı tabloları oluşturlurken E_{ProjectName}_{DDLName} şeklinde isimlendirme kulllanılmaktadır. Prefix alanına bilgi girilerek geliştirici tablo ismininin oluşma formatını değiştirebilir. Eger Prefix bilgisi girilmediyse Proje adı otomatik alınarak isimlendirme yapılmaktadır.
+
+`Field Name` - Sistemin veri tabanında, form için oluşturulacak veri tabanı tablosunun adının belirlendiği alandır. Form adı varsayılan olarak gelmektedir. “Field Name” kısmında forma başka bir isim verilip, formun veritabanı tablosunun adı farklı bir isim olarak yaratılabilir.
+
+## Olaylar
+
+Formun sahip olduğu olaylar, Özellik Görüntüleyici panelindeki “Olaylar” sekmesinde yer almaktadır. Her bir olay, farklı çalışma anlarında tetiklenerek kendilerine özgü işlemleri gerçekleştirir. Bu olaylara geliştirici tarafından yazılan kodlar da ilgili olayın tetiklendiği anda çalıştırılır.
+
+**“Client”** alanında bulunan olaylara çift tıklandığında ekran, TypeScript kodlamanın yapılabileceği “Formadı.ts” isimli form kod editörü kısmına yönlendirilir ve tıklanan olaya ait method bloğu otomatik olarak oluşturulur. **“Server”** alanında bulunan olaylara çift tıklandığında ekran, C# kodlamanın yapılabileceği “Formadı.cs” isimli form kod editörü kısmına yönlendirilir ve tıklanan olaya ait method bloğu otomatik olarak oluşturulur. Geliştirici bu methodlar içerisinde istediği kod bloğunu kurgulayabilir. Olaylar sekmesinden tıklanarak kod tarafında methodu oluşturulmuş olayın yanında, method adı bilgisi otomatik oluşturularak, olayla method arasındaki ilişki belirtilmiş olur.
+
+![Form](https://docsbimser.blob.core.windows.net/imagecontainer/auto-uploadd4ad1c88-e7d1-4198-b4c5-4d6640a560bd)
+
+Oluşan methodlar;
+
+![Form](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload0040467b-8f2d-4168-b2b2-159fd717647a)
+
+![Form](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload160ed32e-8957-49af-800d-8dbba8743d8f)

@@ -1,0 +1,49 @@
+
+## Synergy IDE Ortamında TypeScript Dosyaları Arası Bağımlılık Yönetimi
+
+Bu dokümantasyon, Synergy IDE ortamında TypeScript dosyaları arasında nasıl etkili bir şekilde bağımlılık yönetimi yapılacağını ve dosyalar arası erişim sağlanacağını açıklamaktadır.
+
+### Dosya Yapısı
+
+Örnek olarak projemizde `ClientHelpers` adında bir klasör bulunmaktadır ve bu klasör altında `Calculator.ts` adında bir TypeScript dosyası yer alır. Bu dosya, vergi hesaplaması yapabilen bir yardımcı sınıf içerir.
+
+#### Calculator.ts
+
+`Calculator.ts` dosyası, vergi hesaplaması yapabilen bir sınıf tanımlar. Bu sınıf içinde vergi oranı olarak `%18` sabit bir değer kullanılır.
+
+```typescript
+export class CalculatorHelper {
+    private taxValue: number = 18;
+
+    getBringTaxAmount(value: number): number {
+        return value * parseFloat(`1.${this.taxValue}`);
+    }
+}
+```
+
+### Diğer Dosyalardan Erişim
+
+`CalculatorHelper` sınıfını diğer TypeScript dosyalarından kullanmak için, ilgili dosyanın en üstüne aşağıdaki import satırını eklemek gerekir:
+
+```typescript
+//@ts-ignore
+import { CalculatorHelper } from "/ClientHelpers/CalculatorHelper";
+```
+
+### Kullanım Örneği
+
+Aşağıda, `CalculatorHelper` sınıfının nasıl kullanılacağına dair bir örnek yer almaktadır. Bu örnek, bir kullanıcıdan alınan miktar üzerinden vergi hesaplaması yapar ve sonucu döndürür.
+
+```typescript
+var calculatorHelper = new CalculatorHelper();
+var result = calculatorHelper.getBringTaxAmount(100);
+console.log(result);  // Çıktıda hesaplanan vergi tutarı görünecektir.
+```
+
+### Avantajlar
+
+Bu yapı sayesinde, `CalculatorHelper` sınıfında yapılacak herhangi bir değişiklik doğrudan tüm projeyi etkileyecek ve böylece değişikliklerin uygulanması daha az efor gerektirecektir. Ayrıca, bu yöntem kodun yeniden kullanılabilirliğini ve modülerliğini artırır.
+
+### Sonuç
+
+Synergy IDE ortamında, TypeScript dosyaları arasında bağımlılık yönetimi, kodun modülerliğini ve bakım kolaylığını artırmak için çok önemlidir. Bu dokümantasyon, bu sürecin nasıl yönetileceğine dair temel bir rehber sunmaktadır.

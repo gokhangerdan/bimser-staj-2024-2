@@ -1,0 +1,12 @@
+{
+    "label": "Linux Kurulum",
+    "position": 3,
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "Linux Kurulumu",
+      "description" : "Elektronik imza için kullandığınız Linux sürümünü seçerek kurulumu yapabilirsiniz."
+    }
+}

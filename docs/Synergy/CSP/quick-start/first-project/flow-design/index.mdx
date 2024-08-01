@@ -1,0 +1,29 @@
+---
+title: Akış Tasarımı
+description: Akış Tasarımı
+keywords:
+  - CSP
+  - docs
+  - ide
+slug: index
+---
+
+# Akış Tasarımı
+
+Oluşturulan projenin akışını tasarlamak için; Flows klasörü altındaki varsayılan olarak Flow1 adı ile gelen akışa çift tıklanır. Akış tasarım ekranı, arayüzde varsayılan akış dizaynı ile açılacaktır. Oluşturulacak projede, akış senaryosuna göre varsayılan olarak gelen akış yapısından, kullanılmayacak nesneler silinir ve tasarım mevcut senaryoya göre değiştirilir.
+
+![Akış Tasarımı](https://docsbimser.blob.core.windows.net/imagecontainer/auto-upload8562a31a-1eeb-47a9-8440-d49da04bce68)
+
+Yıllık İzin Talep sürecinin akış senaryosu adımları aşağıdaki gibi olacaktır;
+
+- ***Birinci Adım:*** Web arayüzünde, yıllık izin talep edecek kullanıcı, menüden Yıllık İzin Sürecini başlatır. Bu kullanıcı, akış ekranındaki **Akışı Başlatan (FlowStarter1)** nesnesine karşılık gelir. Akışı başlatan kullanıcı, yıllık izin formundaki alanları doldurup, **“Gönder”** aksiyon butonuna basarsa akış bir sonraki adıma geçer. Ancak formu ilerletmekten vazgeçip **“İptal”** aksiyon butonuna basarsa akış bitecektir.
+
+- ***İkinci Adım:*** Akışı başlatan kullanıcı yıllık izin talebinde bulunup formu bir sonraki adıma gönderdiğinde akış, akışı başlatanın form üzerindeki **“Vekalet Eden Kullanıcı”** alanından seçtiği kullanıcıya gidecektir. Vekalet vermesi için seçilen kişi, akışı başlatanın doldurduğu formu görür, girilen izin tarihlerinde uygunsa, kendisine gönderilen süreci **“Onayla”** aksiyon butonu ile bir sonraki adıma ilerletir. Ancak o tarihlerde şirket dışında ise veya planlı başka bir çalışması mevcutsa, kendisinden başka birinin vekalet kullanıcısı olarak seçilmesi için süreci **“Reddet”** aksiyon butonu ile akışı başlatana geri gönderir.
+
+- ***Üçüncü Adım:*** Vekalet eden kullanıcı olarak seçilen kişi, kendisine verilen vekaleti onayladığında süreç, akışı başlatan kullanıcının yöneticisine onaya düşer. Talep eden kullanıcının yöneticisi, girilen izin tarihlerini kontrol edip, talebi **“Onayla”** aksiyon butonu ile bir sonraki adıma ilerletir. Eğer girilen izin tarihleri süresince kaynak yetersizliği veya o tarihler için planlı bir iş söz konusu ise yönetici, izin tarihlerinde düzenleme yapması için süreci **“Reddet”** aksiyon butonu ile akışı başlatan kullanıcıya geri gönderir.
+ 
+
+- ***Dördüncü Adım:*** Akışı başlatanın yöneticisi, yıllık izin talebini onayladıktan sonra süreç, İnsan Kaynakları Departmanı’na akışı başlatan kişinin, ilgili tarihlerde izinli olacağının kaydını girmeleri için gönderilir. İnsan Kaynakları Departmanı’nda bulunan personellerden 1 kişi gerekli aksiyonu alarak **“Onayla”** aksiyon butonu ile süreci bir sonraki adıma ilerletir.
+ 
+
+- ***Beşinci Adım:*** Tüm süreç adımları tamamlanıp, akışı başlatan kullanıcının yıllık izin talebi onaylandığında son adım olarak, akışı başlatan kullanıcıya yıllık izin talebinin onaylandığına dair **bilgilendirme maili** gönderilir ve süreç tamamlanır.

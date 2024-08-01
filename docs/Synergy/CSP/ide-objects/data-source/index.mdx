@@ -1,0 +1,71 @@
+# DataSource
+Bu dokümantasyon, Synergy IDE'deki DataSource klasörü ve içerisinde yer alan dosyaların kullanımını ve yapılandırmasını açıklamaktadır.
+
+## DataSource Nedir?
+DataSource, Synergy IDE tarafından desteklenen bir özelliktir ve geliştiricilere veri tabanı sorgularını REST çağrılarıyla gerçekleştirme imkanı sunar. Proje oluşturulduğunda, klasik bir proje formatı içerisinde DataSource klasörü oluşturulur. Bu klasör, kullanıcıların veri tabanı sorgularını saklayabilecekleri bir alandır.
+
+## DataSource Klasör Yapısı
+DataSource klasörü, aşağıdaki dosya ve klasörlerden oluşur:
+
+1.  Query Dosyaları: Kullanıcılar tarafından oluşturulan veri tabanı sorguları, bu klasörün altında saklanır. Her bir sorgu, ayrı bir dosya olarak temsil edilir.
+## Query Dosyası Yapısı
+Her bir query dosyası, aşağıdaki bilgileri içerebilir:
+
+1.  Sorgu Adı: Query dosyasının bir ismi vardır ve bu isim, sorgunun amacını açık bir şekilde ifade etmelidir (örneğin: "GetDepartments").
+Sorgu İçeriği: Sorgu dosyasının içinde, gerçekleştirilmek istenen veri tabanı sorgusu yer alır. Örnek olarak: "SELECT * FROM OSDEPARTMENTS".
+2.  Kolonlar: Sorgunun sonucunda dönen kolonlar ve ilgili veri tipleri, query dosyasında saklanır. Bu bilgiler, sorgunun çıktısı hakkında bilgi sağlar.
+Bağlantı Ayarları: Query dosyası, hangi veri tabanına bağlanacağını ve bağlantı özelliklerini tanımlar. Örneğin, veri tabanı türü (MSSQL), bağlantı URL'i, kimlik doğrulama bilgileri vb.
+3.  Cache Ayarları: Eğer gerekiyorsa, query sonuçları cache'de saklanabilir. Bu ayarlar, cache süresini (milisaniye cinsinden) ve cache yapılıp yapılmayacağını belirler.
+4.  Açıklama: Query dosyası için bir açıklama girilebilir. Bu açıklama, sorgunun amacını, kullanımını veya diğer önemli bilgileri açıklayabilir.
+## Query Dosyası Düzenleme
+Kullanıcılar, varolan query dosyalarını düzenleyebilir ve değişiklikleri kaydedebilirler. Örneğin, bir sorgunun sonuna WHERE şartı eklemek veya diğer değişiklikleri yapmak mümkündür. Bu değişikliklerin önceki kayıt edilen dosya ile karşılaştırılması da sağlanabilir.
+1.  İşaretli ikon seçilerek en son kayıt edilen dosya ile şu anki dosya arasındaki farklar görülebilir. Sol tarafta açılan bölüm, son kayıt edilen dosyayı, sağ tarafta açılan bölüm ise şu anki dosyayı ifade etmektedir.
+Sağ tarafta bulunan panele baktığımızda 2.satırda bir **+** iareti görülmektedir. Bu işaretin anlamı ise önceki kayıta göre bu dosyada yeni bir satır eklendiğini ifade etmektedir.
+![](https://docsbimser.blob.core.windows.net/imagecontainer/1-b87c4fa0-70ba-4804-80bc-88d853087f39.png)
+
+## Query Dosyası Dışarı Aktarma ve İçeri Aktarma
+Synergy IDE, kullanıcılara query dosyalarını dışarı aktarma ve başka bir projede içeri aktarma imkanı sağlar. Bu özellik, query dosyalarını kolayca paylaşma ve yeniden kullanma fırsatı sunar. Dışarı aktarılan query dosyaları, bağımsız dosyalar olarak saklanır ve başka projelerde kullanılabilir.
+
+1.  DataSource klasörü üzerinde sağ tıklanarak dışarı aktar seçeneği seçilir.
+    ![](https://docsbimser.blob.core.windows.net/imagecontainer/1-ddd95d56-fd9e-4289-90ed-c3bc4463a2b5.png)
+2. Aktarılacak projede DataSource klasörü üzerinde sağ tıklanarak içeri aktar seçeneği seçilir, ardından açılan pencerede **json** uzantılı dosya seçilerek içeri aktarılır.
+
+    ![](https://docsbimser.blob.core.windows.net/imagecontainer/1-3eb8d702-50e9-41a1-b4db-d9b7c8d019c4.png)
+
+## Parametreler
+Query dosyaları, sorgularda kullanılacak parametreleri destekler. Parametreler, sorgu içinde {{ParametreAdi}} formatında tanımlanır. Kullanıcılar, bu parametreleri query dosyalarında tanımlayabilir ve sorgulama sırasında değerlerini belirtebilirler. Bu özellik, sorguların daha esnek ve dinamik olmasını sağlar. Parametre kullanımları için çift süslü parentez arasına yazılan anahtar kelime ile birlikte otomatik olarak parametre eklenmektedir. Parametrelerin varsayılan değerleri tanımlarak sorgular tamamlanır.
+
+### Örnek Kullanım :
+![](https://docsbimser.blob.core.windows.net/imagecontainer/1-06372a67-8023-4f61-b296-909bd5787191.png)
+```diff
+Dosya Adı: GetDepartments
+
+Sorgu İçeriği:
+SELECT * FROM OSDEPARTMENTS WHERE ID = {{DEPARTMENTID}}
+
+Kolonlar:
+- ID: INTEGER
+- CODE: String
+- DESCRIPTION: String
+
+Parametreler
+-ADI : DEPARTMENTID, TÜRÜ : STRING, VARSAYILAN DEĞER : 0
+
+Özellikler:
+- Açıklama : Bu query, departmanları ID parametresine göre filtreleyerek getirir.
+- Bağlantı : Danismanlik
+- Zaman aşımı : 60
+- Çalıştırma tipi : ExecuteDataAdapter
+- Komut tipi : TSQL
+
+Önbellek:
+- Önbelleğe al : Evet
+- Önbellki tipi: Memory
+- Önbellek süresi: 6000 (ms)
+```
+Bu örnek, GetDepartments query'sini MSSQL veri tabanına bağlanarak gerçekleştirir. Sorgunun sonucunda dönen kolonlar ID,CODE,DESCRIPTION,....'dır. Sorguda **DEPARTMENTID** parametresi kullanılmıştır ve bu parametre sorgulama sırasında belirtilmelidir. Ayrıca, sonuçlar 6000 milisaniye boyunca cache'de saklanır.
+
+### Sorgunun Çalıştırılması
+1.  Yazılan sorguyu çalıştırmak için üst panelde seçilmiş olan **yıldırım** ikonuna tıklanarak srogu çalıştırılır.
+    
+    ![](https://docsbimser.blob.core.windows.net/imagecontainer/1-d2c204b6-0e95-45f5-bd3a-4f5fbeab2c89.png)
