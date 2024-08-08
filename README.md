@@ -15,6 +15,12 @@ python3.10 -m venv env
 # Install requirements
 (env) pip install -r requirements.txt
 
+# Test
+
+pytest -s
+pytest -s app/tests/test_main.py
+pytest -s app/tests/test_main.py::test_read_main
+
 # Run fastapi (auto reload)
 fastapi dev
 

@@ -6,10 +6,11 @@ from pydantic import BaseModel
 # https://qdrant.tech/documentation/concepts/
 from qdrant_client import QdrantClient
 
+from .dependencies.upload_documents import upload_to_qdrant
+
 
 # https://qdrant.tech/documentation/quickstart/
-client = QdrantClient(path="qdrant_test")
-# client = QdrantClient(":memory:")
+client = QdrantClient(":memory:")
 app = FastAPI()
 
 
@@ -38,7 +39,7 @@ def create_embedding(text: str):
 
 @app.get("/")
 def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello, World!"}
 
 @app.post("/insert_document/")
 def insert_document(data: Document):
