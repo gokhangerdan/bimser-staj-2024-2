@@ -1,60 +1,31 @@
-# https://fastapi.tiangolo.com/tutorial/
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from app.dependencies.upload_documents import load_documents_and_upload, query_documents_in_qdrant
 
-# https://github.com/qdrant/qdrant-client
-# https://qdrant.tech/documentation/concepts/
-from qdrant_client import QdrantClient
-
-from .dependencies.upload_documents import upload_to_qdrant
-
-
-# https://qdrant.tech/documentation/quickstart/
-client = QdrantClient(":memory:")
 app = FastAPI()
 
-
-COLLECTION_NAME = "test_collection"
-TOP_K = 3
-
-class Document(BaseModel):
-    content: str
-
 class Query(BaseModel):
-    query: str
+    query_text: str
+    top_k: int = 5
 
-
-def qdrant_upsert_call(document_embedding: list):
-    print(document_embedding)
-    return True
-
-def qdrant_search_call(query_embedding: list):
-    print(query_embedding)
-    return True
-
-def create_embedding(text: str):
-    print(text)
-    return True
-
-
-@app.get("/")
-def root():
-    return {"message": "Hello, World!"}
-
+#Bu endpoint, belirlenen klasördeki tüm dokümanları Qdrant'a yükler.
 @app.post("/insert_document/")
-def insert_document(data: Document):
-    document_embedding = create_embedding(text=data.content)
-    is_success = qdrant_upsert_call(document_embedding=document_embedding)
-    if is_success:
-        return "Document upserted"
-    else:
-        raise HTTPException(status_code=400, detail="Insert document failed")
+def insert_document():
+    try:
+        load_documents_and_upload()  # Dokümanları yükle
+        return {"status": "success"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
+#Bu endpoint, verilen sorgu metnini embedding'e çevirir ve Qdrant'ta arama yapar.
 @app.post("/query_documents/")
-def query_documents(data: Query):
-    query_embedding = create_embedding(text=data.query)
-    is_success = qdrant_search_call(query_embedding=query_embedding)
-    if is_success:
-        return "Document content"
-    else:
-        raise HTTPException(status_code=400, detail="Query documents failed")
+def query_documents(query: Query):
+    try:
+        results = query_documents_in_qdrant(query.query_text, query.top_k)
+        return results
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
