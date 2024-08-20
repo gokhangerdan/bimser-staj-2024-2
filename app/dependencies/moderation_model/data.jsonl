@@ -1,0 +1,7 @@
+[
+    {"message": "Merhaba, nasılsınız?", "label": 0},
+    {"message": "Günaydın!", "label": 0},
+    {"message": "Bu nedir?", "label": 0},
+    {"message": "İşini düzgün yapamıyor musun?", "label": 1},
+    {"message": "Salak mısın sen?", "label": 1},
+]

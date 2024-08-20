@@ -23,7 +23,7 @@ def test_upload_documents_to_qdrant_success(mock_qdrant_client, mock_create_embe
     documents = [
         {"path": "test_path/test.md", "content": "Test content"}
     ]
-    upload_documents_to_qdrant(documents)  # Mock'lanmış fonksiyonları kullanarak yükleme yap
-
+    res = upload_documents_to_qdrant(documents)  # Mock'lanmış fonksiyonları kullanarak yükleme yap
+    assert res == 1
  
 

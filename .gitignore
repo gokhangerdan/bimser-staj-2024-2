@@ -1,3 +1,7 @@
+.vscode
+embeddings.npy
+moderation_model.png
+moderation_model.keras
 .DS_Store
 .gitignore
 

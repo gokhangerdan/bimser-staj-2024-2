@@ -9,5 +9,6 @@ client = TestClient(app)
 
 def test_query_documents():
     response = client.post("/query_documents/", json={"query_text": "example query", "top_k": 5})
+    print(response.content)
     assert response.status_code == 200
     assert len(response.json()["results"]) == 5

@@ -13,26 +13,28 @@ def read_documents(root_dir="docs/Synergy/CSP/trouble_shooting"):
                 file_path = os.path.join(subdir, file)
                 with open(file_path, "r", encoding="utf-8") as f:
                     content = f.read()
-                    result.append({"path": file_path, "content": content})
+                    result.append(file_path+"\n\n"+content)
     return result
 
 def upload_documents_to_qdrant(documents):
-    for doc in documents:
-        try:
-            embedding = create_embedding(doc['content'])
-            qdrant_client.upsert(
-                collection_name="my_collection",
-                points=[
-                    {
-                        "id": str(uuid.uuid4()), 
-                        "vector": embedding,
-                        "payload": {"path": doc['path'], "content": doc['content']}
-                    }
-                ]
-            )
-            print(f"Successfully uploaded: {doc['path']}")
-        except Exception as e:
-            print(f"Error uploading document {doc['path']}: {e}")
+    embeddings = create_embedding(documents)
+    points = []
+    for document, embedding in zip(documents, embeddings):
+        points.append(
+            {
+                "id": str(uuid.uuid4()), 
+                "vector": embedding,
+                "payload": {"content": document}
+            }
+        )
+    try:
+        qdrant_client.upsert(
+            collection_name="my_collection",
+            points=points
+        )
+        return {"status": "success"}
+    except Exception as e:
+        return {"status": "failed", "message": str(e)}
 
 def load_documents_and_upload():
     documents = read_documents()
