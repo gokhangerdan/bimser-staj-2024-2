@@ -31,7 +31,7 @@ model = tf.keras.Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-history = model.fit(X_train, y_train, epochs=7, batch_size=32, validation_split=0.15)
+history = model.fit(X_train, y_train, epochs=20, batch_size=32, validation_split=0.15)
 
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Accuracy: {accuracy}')
