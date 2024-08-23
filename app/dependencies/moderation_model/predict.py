@@ -17,4 +17,8 @@ def create_embeddings(documents):
     embeddings = np.asarray(embeddings_list)
     return embeddings
 
+def result_prediction(documents):
+    predictions = model.predict(create_embeddings([documents]))
+    return predictions
+
 predictions = model.predict(create_embeddings(["Merhaba nasılsın?"]))
